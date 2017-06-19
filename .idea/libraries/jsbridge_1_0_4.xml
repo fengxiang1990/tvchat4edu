@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jsbridge-1.0.4">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/tVChatForPhone/build/intermediates/exploded-aar/com.github.lzyzsd/jsbridge/1.0.4/res" />
+      <root url="jar://$PROJECT_DIR$/tVChatForPhone/build/intermediates/exploded-aar/com.github.lzyzsd/jsbridge/1.0.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lzyzsd/jsbridge/1.0.4/d4e8d67538046589736f6c9504e6bbcf5e0d8de5/jsbridge-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

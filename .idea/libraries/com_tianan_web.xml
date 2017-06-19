@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.tianan.web">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/tVChatForPhone/libs/com.tianan.web.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

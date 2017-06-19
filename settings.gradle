@@ -1,0 +1,5 @@
+include ':lib-zxing', ':V2Api'
+include ':shareSDK'
+include ':oneKeyShareNew'
+include ':library'
+include ':tVChatForPhone'

@@ -1,0 +1,172 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From OneKeyShareNew:
+* build.xml
+* proguard-project.txt
+From ShareSDK:
+* build.xml
+* proguard-project.txt
+From TVChatForPhone:
+* .DS_Store
+* .idea/
+* .idea/.name
+* .idea/TVChatForPhone.iml
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/encodings.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+From library:
+* LICENSE
+* ic_launcher-web.png
+* library.iml
+* pom.xml
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:21.0.3
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In BCAPI_ANDROID:
+* AndroidManifest.xml => bCAPI_ANDROID/src/main/AndroidManifest.xml
+* assets/ => bCAPI_ANDROID/src/main/assets
+* libs/armeabi/libevent.so => bCAPI_ANDROID/src/main/jniLibs/armeabi/libevent.so
+* libs/armeabi/libjpush213.so => bCAPI_ANDROID/src/main/jniLibs/armeabi/libjpush213.so
+* libs/armeabi/libudt.so => bCAPI_ANDROID/src/main/jniLibs/armeabi/libudt.so
+* libs/armeabi/libv2client.so => bCAPI_ANDROID/src/main/jniLibs/armeabi/libv2client.so
+* libs/armeabi/libv2ve.so => bCAPI_ANDROID/src/main/jniLibs/armeabi/libv2ve.so
+* libs/armeabi/libv2vi.so => bCAPI_ANDROID/src/main/jniLibs/armeabi/libv2vi.so
+* res/ => bCAPI_ANDROID/src/main/res/
+* src/ => bCAPI_ANDROID/src/main/java/
+In ShareSDK:
+* AndroidManifest.xml => shareSDK/src/main/AndroidManifest.xml
+* assets/ => shareSDK/src/main/assets
+* libs/MobCommons-2016.0707.1708.jar => shareSDK/libs/MobCommons-2016.0707.1708.jar
+* libs/MobTools-2016.0707.1708.jar => shareSDK/libs/MobTools-2016.0707.1708.jar
+* libs/ShareSDK-Alipay-2.7.4.jar => shareSDK/libs/ShareSDK-Alipay-2.7.4.jar
+* libs/ShareSDK-Core-2.7.4.jar => shareSDK/libs/ShareSDK-Core-2.7.4.jar
+* libs/ShareSDK-Douban-2.7.4.jar => shareSDK/libs/ShareSDK-Douban-2.7.4.jar
+* libs/ShareSDK-Dropbox-2.7.4.jar => shareSDK/libs/ShareSDK-Dropbox-2.7.4.jar
+* libs/ShareSDK-Email-2.7.4.jar => shareSDK/libs/ShareSDK-Email-2.7.4.jar
+* libs/ShareSDK-Evernote-2.7.4.jar => shareSDK/libs/ShareSDK-Evernote-2.7.4.jar
+* libs/ShareSDK-Facebook-2.7.4.jar => shareSDK/libs/ShareSDK-Facebook-2.7.4.jar
+* libs/ShareSDK-FacebookMessenger-2.7.4.jar => shareSDK/libs/ShareSDK-FacebookMessenger-2.7.4.jar
+* libs/ShareSDK-Flickr-2.7.4.jar => shareSDK/libs/ShareSDK-Flickr-2.7.4.jar
+* libs/ShareSDK-Foursquare-2.7.4.jar => shareSDK/libs/ShareSDK-Foursquare-2.7.4.jar
+* libs/ShareSDK-GooglePlus-2.7.4.jar => shareSDK/libs/ShareSDK-GooglePlus-2.7.4.jar
+* libs/ShareSDK-Instagram-2.7.4.jar => shareSDK/libs/ShareSDK-Instagram-2.7.4.jar
+* libs/ShareSDK-Instapaper-2.7.4.jar => shareSDK/libs/ShareSDK-Instapaper-2.7.4.jar
+* libs/ShareSDK-KaiXin-2.7.4.jar => shareSDK/libs/ShareSDK-KaiXin-2.7.4.jar
+* libs/ShareSDK-Kakao-Core-2.7.4.jar => shareSDK/libs/ShareSDK-Kakao-Core-2.7.4.jar
+* libs/ShareSDK-KakaoStory-2.7.4.jar => shareSDK/libs/ShareSDK-KakaoStory-2.7.4.jar
+* libs/ShareSDK-KakaoTalk-2.7.4.jar => shareSDK/libs/ShareSDK-KakaoTalk-2.7.4.jar
+* libs/ShareSDK-Line-2.7.4.jar => shareSDK/libs/ShareSDK-Line-2.7.4.jar
+* libs/ShareSDK-Linkedin-2.7.4.jar => shareSDK/libs/ShareSDK-Linkedin-2.7.4.jar
+* libs/ShareSDK-Mingdao-2.7.4.jar => shareSDK/libs/ShareSDK-Mingdao-2.7.4.jar
+* libs/ShareSDK-Pinterest-2.7.4.jar => shareSDK/libs/ShareSDK-Pinterest-2.7.4.jar
+* libs/ShareSDK-Pocket-2.7.4.jar => shareSDK/libs/ShareSDK-Pocket-2.7.4.jar
+* libs/ShareSDK-QQ-2.7.4.jar => shareSDK/libs/ShareSDK-QQ-2.7.4.jar
+* libs/ShareSDK-QZone-2.7.4.jar => shareSDK/libs/ShareSDK-QZone-2.7.4.jar
+* libs/ShareSDK-Renren-2.7.4.jar => shareSDK/libs/ShareSDK-Renren-2.7.4.jar
+* libs/ShareSDK-ShortMessage-2.7.4.jar => shareSDK/libs/ShareSDK-ShortMessage-2.7.4.jar
+* libs/ShareSDK-SinaWeibo-2.7.4.jar => shareSDK/libs/ShareSDK-SinaWeibo-2.7.4.jar
+* libs/ShareSDK-TencentWeibo-2.7.4.jar => shareSDK/libs/ShareSDK-TencentWeibo-2.7.4.jar
+* libs/ShareSDK-Tumblr-2.7.4.jar => shareSDK/libs/ShareSDK-Tumblr-2.7.4.jar
+* libs/ShareSDK-Twitter-2.7.4.jar => shareSDK/libs/ShareSDK-Twitter-2.7.4.jar
+* libs/ShareSDK-VKontakte-2.7.4.jar => shareSDK/libs/ShareSDK-VKontakte-2.7.4.jar
+* libs/ShareSDK-Wechat-2.7.4.jar => shareSDK/libs/ShareSDK-Wechat-2.7.4.jar
+* libs/ShareSDK-Wechat-Core-2.7.4.jar => shareSDK/libs/ShareSDK-Wechat-Core-2.7.4.jar
+* libs/ShareSDK-Wechat-Favorite-2.7.4.jar => shareSDK/libs/ShareSDK-Wechat-Favorite-2.7.4.jar
+* libs/ShareSDK-Wechat-Moments-2.7.4.jar => shareSDK/libs/ShareSDK-Wechat-Moments-2.7.4.jar
+* libs/ShareSDK-WhatsApp-2.7.4.jar => shareSDK/libs/ShareSDK-WhatsApp-2.7.4.jar
+* libs/ShareSDK-Yixin-2.7.4.jar => shareSDK/libs/ShareSDK-Yixin-2.7.4.jar
+* libs/ShareSDK-Yixin-Core-2.7.4.jar => shareSDK/libs/ShareSDK-Yixin-Core-2.7.4.jar
+* libs/ShareSDK-Yixin-Moments-2.7.4.jar => shareSDK/libs/ShareSDK-Yixin-Moments-2.7.4.jar
+* libs/ShareSDK-YouDao-2.7.4.jar => shareSDK/libs/ShareSDK-YouDao-2.7.4.jar
+* res/ => shareSDK/src/main/res/
+* src/ => shareSDK/src/main/java
+In OneKeyShareNew:
+* AndroidManifest.xml => oneKeyShareNew/src/main/AndroidManifest.xml
+* assets/ => oneKeyShareNew/src/main/assets
+* res/ => oneKeyShareNew/src/main/res/
+* src/ => oneKeyShareNew/src/main/java/
+In library:
+* AndroidManifest.xml => library/src/main/AndroidManifest.xml
+* assets/ => library/src/main/assets
+* lint.xml => library/lint.xml
+* res/ => library/src/main/res/
+* src/ => library/src/main/java/
+In TVChatForPhone:
+* AndroidManifest.xml => tVChatForPhone/src/main/AndroidManifest.xml
+* assets/ => tVChatForPhone/src/main/assets/
+* libs/CGSUtils.jar => tVChatForPhone/libs/CGSUtils.jar
+* libs/alibaba.jar => tVChatForPhone/libs/alibaba.jar
+* libs/android-support-v13.jar => tVChatForPhone/libs/android-support-v13.jar
+* libs/com.tianan.web.jar => tVChatForPhone/libs/com.tianan.web.jar
+* libs/disklrucache-2.0.2.jar => tVChatForPhone/libs/disklrucache-2.0.2.jar
+* libs/nineoldandroids-2.4.0.jar => tVChatForPhone/libs/nineoldandroids-2.4.0.jar
+* libs/pinyin4j-2.5.0.jar => tVChatForPhone/libs/pinyin4j-2.5.0.jar
+* libs/universal-image-loader-1.9.4.jar => tVChatForPhone/libs/universal-image-loader-1.9.4.jar
+* libs/xUtils-2.6.14.jar => tVChatForPhone/libs/xUtils-2.6.14.jar
+* libs/zxing.jar => tVChatForPhone/libs/zxing.jar
+* res/ => tVChatForPhone/src/main/res/
+* src/ => tVChatForPhone/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

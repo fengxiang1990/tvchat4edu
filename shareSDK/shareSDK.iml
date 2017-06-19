@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":V2Api" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":shareSDK" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="tvchat20161124" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":V2Api" />
+        <option name="GRADLE_PROJECT_PATH" value=":shareSDK" />
       </configuration>
     </facet>
     <facet type="android" name="Android">
@@ -96,5 +96,16 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="MobCommons-2016.0707.1708" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-SinaWeibo-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Favorite-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Core-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Wechat-Moments-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="MobTools-2016.0707.1708" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Wechat-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Core-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-QZone-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-QQ-2.7.4" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-WhatsApp-2.7.4" level="project" />
   </component>
 </module>
