@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyProgressBarStyle" parent="android:Widget.Holo.Light.ProgressBar">
+        <!--<item name="indeterminateDrawable">@drawable/progress_medium_white</item>-->
+    </style>
+</resources>

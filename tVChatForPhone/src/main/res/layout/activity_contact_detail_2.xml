@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/contact_detail_main_layout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_activity_title_layout"/>
+
+    <TextView
+        style="@style/Com_activity_title_Divider_Style">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_activity_top_backgroud"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:paddingTop="@dimen/common_padding_verticial_small"
+            android:paddingBottom="@dimen/common_padding_verticial_small"
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <include
+                android:id="@+id/contact_detail_ohterly"
+                layout="@layout/common_contact_conversation_layout"/>
+
+            <RelativeLayout
+                android:visibility="invisible"
+                android:id="@+id/contact_detail_ownerly"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/contact_detail_owner_name"
+                    style="@style/Contact_Detail_TextView_Style"/>
+                <com.bizcom.vc.widget.CustomAvatarImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/contact_detail_owner_avatar"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_margin_horizontal_border"
+                    app:riv_oval="true" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_below="@id/RelativeLayout2"
+            android:id="@+id/authentication_message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/detail_detail_item_margin_bottom"
+            android:layout_marginLeft="@dimen/contact_detail_item_margin_left"
+            android:layout_marginRight="@dimen/contact_detail_item_margin_right"
+            android:background="@drawable/rounded_corners_of_contact_user_detail_outer" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                android:padding="10dp"
+                android:text="附加消息"
+                android:textColor="@color/common_item_text_color_gray"
+                android:textSize="@dimen/common_item_text_size" />
+            <TextView
+                android:id="@+id/authentication_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                android:layout_weight="1"
+                android:background="@null"
+                android:maxLength="@integer/common_edit_text_max_length_50"
+                android:textColor="@color/common_item_text_color_gray"
+                android:textSize="@dimen/common_item_text_size" >
+            </TextView>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contact_detail_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/authentication_message_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_right"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:id="@+id/contact_user_detail_signature_et_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_signature"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_signature_et"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/contact_user_detail_signature_et_belowline"
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:id="@+id/contact_user_detail_nick_name_et_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_nick_name"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_nick_name_et"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/contact_user_detail_nick_name_et_belowline"
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_account"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_account_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_gender"/>
+
+                        <FrameLayout
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                                <RadioGroup
+                                    android:visibility="gone"
+                                    android:id="@+id/contact_user_detail_gender_rg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="right"
+                                    android:orientation="horizontal"
+                                    android:textColor="@color/activiy_contact_detail_item_color" >
+                                    <RadioButton
+                                        android:id="@+id/radio0"
+                                        style="@style/leftRadioStyle"
+                                        android:layout_gravity="center"
+                                        android:maxLength="5"
+                                        android:tag="1"
+                                        android:textSize="@dimen/common_item_text_size_low"
+                                        android:textColor="@color/common_item_text_color_gray"
+                                        android:text="@string/contacts_user_detail_gender_male" />
+                                    <RadioButton
+                                        android:id="@+id/radio1"
+                                        style="@style/leftRadioStyle"
+                                        android:layout_gravity="center"
+                                        android:maxLength="5"
+                                        android:tag="2"
+                                        android:textSize="@dimen/common_item_text_size_low"
+                                        android:textColor="@color/common_item_text_color_gray"
+                                        android:text="@string/contacts_user_detail_gender_female" />
+                                    <RadioButton
+                                        android:id="@+id/radio2"
+                                        style="@style/leftRadioStyle"
+                                        android:layout_gravity="center"
+                                        android:maxLength="5"
+                                        android:tag="0"
+                                        android:textSize="@dimen/common_item_text_size_low"
+                                        android:textColor="@color/common_item_text_color_gray"
+                                        android:text="@string/contacts_user_detail_gender_priacy" />
+                                </RadioGroup>
+                            <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                                android:id="@+id/contact_user_detail_gender_tv"
+                                style="@style/Contact_Detail_Edittext_Style"/>
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_birdthday"/>
+
+                        <TextView
+                            android:id="@+id/contact_user_detail_birthday_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_cell_phone"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_cell_phone_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_telephone"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_telephone_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_fax"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_fax_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:id="@+id/contact_user_detail_company_tv_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_company"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_company_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/contact_user_detail_company_tv_layout_devider"
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:id="@+id/contact_user_detail_department_tv_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_department"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_department_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/contact_user_detail_department_tv_layout_devider"
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:id="@+id/contact_user_detail_title_tv_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_title"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_title_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/contact_user_detail_title_tv_layout_devider"
+                        style="@style/Contact_Detail_Divider_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:text="@string/contacts_user_detail_item_address"/>
+
+                        <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                            android:id="@+id/contact_user_detail_address_tv"
+                            style="@style/Contact_Detail_Edittext_Style"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_height="1dp"
+                        android:background="@color/common_divider_color_gray"
+                        android:layout_width="match_parent"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ws_contact_detail2_conf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/detail_detail_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_item_margin_left"
+                    android:layout_marginRight="@dimen/contact_detail_item_margin_right"
+                    android:layout_marginTop="@dimen/detail_detail_item_margin_bottom"
+                    android:background="@drawable/rounded_corners_of_contact_user_detail_outer"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/common_margin_verticial_10"
+                        android:src="@drawable/conversation_video_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:text="@string/contacts_user_detail_button_invite_video_conference"
+                        android:textColor="@color/common_item_text_color_blue"
+                        android:textSize="@dimen/common_item_text_size"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/contact_detail_contact_group_item_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_left"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_right"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_corners_of_contact_user_detail_outer"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp">
+
+                        <TextView
+                            android:id="@+id/detail_detail_2_group_title"
+                            style="@style/Contact_Detail_TextView_Style"
+                            android:layout_centerVertical="true"
+                            android:text="@string/contacts_user_detail_item_group"/>
+
+                        <TextView
+                            android:id="@+id/detail_detail_2_group_name"
+                            style="@style/Com_Normal_TextView_Style"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                            android:layout_toLeftOf="@+id/contacts_group_arrow_right"
+                            android:layout_toRightOf="@+id/detail_detail_2_group_title"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"/>
+
+                        <ImageView
+                            android:id="@+id/contacts_group_arrow_right"
+                            style="@style/Com_Arrow_Style"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/contacts_group_view_arrow_padding_left"
+                            android:src="@drawable/arrow_right_gray"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

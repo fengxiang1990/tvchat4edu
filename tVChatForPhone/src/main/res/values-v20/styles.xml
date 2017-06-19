@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyProgressBarStyle" parent="Base.Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_medium_material</item>
+    </style>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/re_firstNameTxet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_15_80" >
+
+            <TextView
+                android:id="@+id/tv_firstNameTxet"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_15_80"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/root_main_tongxunlu_nor"
+                android:gravity="center"
+                android:text="周"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="@dimen/width_7_80"
+                android:layout_height="13dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="2dp"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:text="在线"
+                android:textColor="@color/white"
+                android:textSize="9dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_15_80"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/re_firstNameTxet"
+            android:gravity="center|left"
+            android:orientation="vertical" >
+
+          
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_head_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                 <TextView
+                android:id="@+id/tv_nameTxet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奥巴马"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:id="@+id/tv_hasRegsted"
+                    android:layout_width="@dimen/width_8_80"
+                    android:layout_height="@dimen/width_3_80"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/root_zhuce_bg"
+                    android:gravity="center"
+                    android:text="已注册"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/tv_numberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13533334444"
+                android:textColor="@color/main_color_grag"
+                android:textSize="@dimen/text_size_3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_startCom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp" >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/root_videochat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="视频聊天"
+                    android:textColor="@color/main_color_grag"
+                    android:textSize="@dimen/text_size_0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp" >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/root_addfriend_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="添加好友"
+                    android:textColor="@color/main_color_grag"
+                    android:textSize="@dimen/text_size_0" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/width_5_80"
+        android:layout_marginRight="@dimen/width_5_80"
+        android:background="#eeee" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_16_80" />
+
+</LinearLayout>

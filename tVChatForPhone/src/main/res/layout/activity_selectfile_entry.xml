@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0F0"
+    android:orientation="vertical" >
+    <include layout="@layout/common_activity_title_layout"/>
+    <TextView
+        style="@style/Com_activity_title_Divider_Style" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_item_text_color"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:id="@+id/selectfile_entry_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="@dimen/select_file_entry_interval"
+                android:paddingTop="@dimen/select_file_entry_interval" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/select_file_entry_interval"
+                    android:layout_marginLeft="@dimen/select_file_entry_interval"
+                    android:text="@string/contact_message_pic_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/select_file_adapter_size" />
+                <ImageView
+                    style="@style/Com_Arrow_Style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/select_file_entry_interval"
+                    android:src="@drawable/arrow_right_gray" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginLeft="@dimen/common_margin_divider_left_small"
+                style="@style/Com_Normal_Divider_Deep_Style"/>
+            <RelativeLayout
+                android:id="@+id/selectfile_entry_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="@dimen/select_file_entry_interval"
+                android:paddingTop="@dimen/select_file_entry_interval" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/select_file_entry_interval"
+                    android:layout_marginLeft="@dimen/select_file_entry_interval"
+                    android:text="@string/contact_message_send_file"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/select_file_adapter_size" />
+                <ImageView
+                    style="@style/Com_Arrow_Style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/select_file_entry_interval"
+                    android:src="@drawable/arrow_right_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        style="@style/Com_Normal_Divider_Deep_Style"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_selectfile_buttontitle" />
+</LinearLayout>

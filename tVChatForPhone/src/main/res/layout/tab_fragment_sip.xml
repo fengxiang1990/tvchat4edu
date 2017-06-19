@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:melove="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+        <include layout="@layout/common_activity_title_layout" />
+    </RelativeLayout>
+    <TextView style="@style/Com_activity_title_Divider_Style" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="@dimen/common_margin_top_head_layout" >
+            <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                android:id="@+id/sip_text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sip_edit_margin_horizontal"
+                android:layout_marginRight="@dimen/sip_edit_margin_horizontal"
+                android:drawableRight="@drawable/txt_search_clear"
+                android:singleLine="true"
+                android:textSize="@dimen/common_item_text_size" />
+            <TextView
+                android:id="@+id/sip_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_bg_blue_bound"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="呼叫"
+                android:textColor="@color/common_item_text_color_blue"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sip_number_margin_horizontal"
+            android:layout_marginRight="@dimen/sip_number_margin_horizontal" >
+            <com.bizcom.vc.adapter.view.SipNumberImageView
+                android:id="@+id/sip_number_one"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                melove:shape_type="round" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_two"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_three"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sip_number_margin_horizontal"
+            android:layout_marginRight="@dimen/sip_number_margin_horizontal"
+            android:layout_marginTop="10dp" >
+            <com.bizcom.vc.adapter.view.SipNumberImageView
+                android:id="@+id/sip_number_four"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                melove:shape_type="round" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_five"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_six"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sip_number_margin_horizontal"
+            android:layout_marginRight="@dimen/sip_number_margin_horizontal"
+            android:layout_marginTop="10dp" >
+            <com.bizcom.vc.adapter.view.SipNumberImageView
+                android:id="@+id/sip_number_seven"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                melove:shape_type="round" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_eight"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_nine"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sip_number_margin_horizontal"
+            android:layout_marginRight="@dimen/sip_number_margin_horizontal"
+            android:layout_marginTop="10dp" >
+            <com.bizcom.vc.adapter.view.SipNumberImageView
+                android:id="@+id/sip_number_zero"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                melove:shape_type="round" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_star"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_sp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sip_number_margin_horizontal"
+            android:layout_marginRight="@dimen/sip_number_margin_horizontal"
+            android:layout_marginTop="10dp" >
+            <com.bizcom.vc.adapter.view.SipNumberImageView
+                android:id="@+id/sip_number_add"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                melove:shape_type="round" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_minus"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                <com.bizcom.vc.adapter.view.SipNumberImageView
+                    android:id="@+id/sip_number_call"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    melove:shape_type="round" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

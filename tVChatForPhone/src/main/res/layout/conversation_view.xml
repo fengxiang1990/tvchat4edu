@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_activity_top_backgroud" >
+    <RelativeLayout
+        android:id="@+id/common_conversation_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ws_com_list_item_selector"
+        android:descendantFocusability="blocksDescendants" >
+        <TextView
+            style="@style/Com_Normal_Divider_Style"
+            android:id="@+id/common_conversation_divier"
+            android:layout_below="@+id/common_conversation"
+            android:layout_marginLeft="@dimen/common_margin_divider_left" />
+        <TextView
+            android:id="@+id/common_conversation_search_black"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:background="@color/common_activity_backgroud"
+            android:layout_below="@+id/common_conversation_divier"
+            android:layout_height="@dimen/common_margin_verticial"/>
+        <FrameLayout
+            android:id="@+id/common_conversation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/common_margin_top_head_layout"
+            android:layout_toLeftOf="@+id/common_conversation_time_ly" >
+            <include layout="@layout/common_conversation_layout" />
+        </FrameLayout>
+        <RelativeLayout
+            android:id="@+id/common_conversation_time_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_horizontal_border"
+            android:layout_marginTop="3dp" >
+            <TextView
+                android:id="@+id/common_conversation_time_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxWidth="150dp"
+                android:minWidth="90dp"
+                android:singleLine="true"
+                android:textColor="@color/common_item_text_color_gray"
+                android:textSize="@dimen/common_item_text_size_small" />
+            <TextView
+                android:id="@+id/common_conversation_time_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/common_conversation_view_height"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxWidth="150dp"
+                android:minWidth="90dp"
+                android:singleLine="true"
+                android:text="2016年12月12日"
+                android:visibility="invisible"
+                android:textColor="@color/common_item_text_color_gray"
+                android:textSize="@dimen/common_item_text_size_small" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/ws_common_conversation_search_loadmore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/common_item_text_color_red"
+            android:gravity="center"
+            android:textSize="@dimen/common_item_text_size"
+            android:textColor="@color/common_item_text_color_blue"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_com_backgroud"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header2"
+         />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/width_6_80"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/BaseEditText"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/imm1"
+                android:layout_width="@dimen/width_10_80"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/root_pwd"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/password1"
+                style="@style/BaseEditText"
+                android:layout_margin="0dp"
+                android:layout_toLeftOf="@+id/im_showpwd1"
+                android:layout_toRightOf="@+id/imm1"
+                android:hint="请输入旧密码"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"></EditText>
+
+            <ImageView
+                android:id="@+id/im_showpwd1"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_3_80"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_4_80"
+                android:background="@drawable/root_show_pwd"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/BaseEditText"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/imm2"
+                android:layout_width="@dimen/width_10_80"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/root_pwd"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/password2"
+                style="@style/BaseEditText"
+                android:layout_margin="0dp"
+                android:layout_toLeftOf="@+id/im_showpwd2"
+                android:layout_toRightOf="@+id/imm2"
+                android:hint="请输入新密码"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"></EditText>
+
+            <ImageView
+                android:id="@+id/im_showpwd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_4_80"
+                android:src="@mipmap/close_eye" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_6_80"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imm3"
+                android:layout_width="@dimen/width_10_80"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/root_pwd" />
+
+            <EditText
+                android:id="@+id/password3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_marginLeft="4dp"
+                android:layout_toLeftOf="@+id/im_showpwd3"
+                android:layout_toRightOf="@+id/imm3"
+                android:background="@null"
+                android:ems="10"
+                android:hint="请确认新密码"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/login_activity_login_box_text_color"
+                android:textSize="@dimen/common_item_text_size"></EditText>
+
+            <ImageView
+                android:id="@+id/im_showpwd3"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_3_80"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_4_80"
+                android:background="@drawable/root_show_pwd" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/comfirm_button"
+            style="@style/BaseButton"
+            android:layout_marginTop="50dp"
+            android:text="保存" />
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:text="忘记密码?"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/activity_home_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_12_80"
+        android:layout_alignParentTop="true" />
+
+    <TextView style="@style/Com_activity_title_Divider_Style" />
+
+</LinearLayout>

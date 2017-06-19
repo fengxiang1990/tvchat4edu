@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/video_layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/in_meeting_menu_button_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/in_meeting_tools_bar"
+            android:layout_alignTop="@+id/in_meeting_tools_bar"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/in_meeting_menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/in_meeting_feature_menu_button_padding_horizontal"
+                android:paddingRight="@dimen/in_meeting_feature_menu_button_padding_horizontal"
+                android:src="@drawable/video_menu_button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/in_meeting_video_separation_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignEnd="@+id/in_meeting_menu_button_ly"
+            android:layout_alignLeft="@+id/in_meeting_menu_button_ly"
+            android:layout_alignRight="@+id/in_meeting_menu_button_ly"
+            android:layout_alignStart="@+id/in_meeting_menu_button_ly"
+            android:layout_below="@+id/in_meeting_menu_button_ly"
+            android:background="#cdcdcf"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/in_meeting_menu_button_ly"
+            android:background="#ffffff"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/in_meeting_tools_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/in_meeting_menu_button_ly"
+            android:layout_toRightOf="@+id/in_meeting_menu_button_ly"
+            android:background="#ffffff"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/in_meeting_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="@dimen/in_meeting_tools_bar_margin_right"
+                android:layout_marginRight="@dimen/in_meeting_tools_bar_margin_right"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/common_item_text_color_black"
+                android:textSize="@dimen/common_title_text_size" />
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_chairman_control"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_conference_titlebar_more"
+                        android:paddingBottom="@dimen/conference_activity_title_bar_button_padding"
+                        android:paddingLeft="@dimen/conference_activity_title_bar_button_padding"
+                        android:paddingRight="@dimen/conference_activity_title_bar_button_padding"
+                        android:paddingTop="@dimen/conference_activity_title_bar_button_padding" />
+
+                    <ImageView
+                        android:id="@+id/host_request_msg_notificator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/iv_chairman_control"
+                        android:layout_alignRight="@+id/iv_chairman_control"
+                        android:layout_alignTop="@+id/iv_chairman_control"
+                        android:src="@drawable/red_nofificator" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/speaker_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/in_meeting_tools_bar_margin_right"
+                    android:layout_marginStart="@dimen/in_meeting_tools_bar_margin_right"
+                    android:paddingBottom="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingLeft="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingRight="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingTop="@dimen/conference_activity_title_bar_button_padding"
+                    android:src="@drawable/btn_conference_titlebar_mute_open" />
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/in_meeting_tools_bar_margin_right"
+                    android:layout_marginStart="@dimen/in_meeting_tools_bar_margin_right"
+                    android:paddingBottom="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingLeft="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingRight="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingTop="@dimen/conference_activity_title_bar_button_padding"
+                    android:src="@drawable/btn_conference_titlebar_camera_open" />
+
+                <ImageView
+                    android:id="@+id/in_meeting_feature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/in_meeting_tools_bar_margin_right"
+                    android:layout_marginStart="@dimen/in_meeting_tools_bar_margin_right"
+                    android:background="@drawable/btn_conference_titlebar_more_feature"
+                    android:paddingBottom="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingLeft="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingRight="@dimen/conference_activity_title_bar_button_padding"
+                    android:paddingTop="@dimen/conference_activity_title_bar_button_padding" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/in_meeting_video_separation_line0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/in_meeting_tools_bar"
+            android:layout_toLeftOf="@+id/in_meeting_video_separation_line1"
+            android:layout_toStartOf="@+id/in_meeting_video_separation_line1"
+            android:background="#cdcdcf"
+            android:orientation="vertical"
+            android:visibility="invisible"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/in_meeting_video_separation_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/in_meeting_tools_bar"
+            android:layout_toEndOf="@+id/in_meeting_menu_button_ly"
+            android:layout_toRightOf="@+id/in_meeting_menu_button_ly"
+            android:background="#cdcdcf"
+            android:orientation="vertical"></LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/in_meeting_content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/in_meeting_video_separation_line1"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:id="@+id/in_meeting_menu_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/menu_button_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/in_meeting_menu_show_invition_attendees_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingBottom="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                        android:paddingLeft="@dimen/in_meeting_feature_menu_button_padding_horizontal"
+                        android:paddingRight="@dimen/in_meeting_feature_menu_button_padding_horizontal"
+                        android:paddingTop="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                        android:src="@drawable/video_menu_invite_attendee_button" />
+
+                    <ImageView
+                        android:id="@+id/in_meeting_menu_show_attendees_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingBottom="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                        android:paddingTop="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                        android:src="@drawable/video_send_attendee_button" />
+
+                    <RelativeLayout
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/in_meeting_menu_show_msg_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingBottom="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                            android:paddingTop="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                            android:src="@drawable/video_menu_msg_button" />
+
+                        <ImageView
+                            android:id="@+id/chat_request_msg_notificator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/in_meeting_menu_show_msg_button"
+                            android:layout_alignRight="@+id/in_meeting_menu_show_msg_button"
+                            android:layout_alignTop="@+id/in_meeting_menu_show_msg_button"
+                            android:src="@drawable/red_nofificator" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/in_meeting_menu_show_doc_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingBottom="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                        android:paddingTop="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                        android:src="@drawable/video_menu_doc_button" />
+
+                    <RelativeLayout
+                        android:id="@+id/in_meeting_menu_show_app_share_button_ly"
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/in_meeting_menu_show_app_share_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingBottom="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                            android:paddingTop="@dimen/in_meeting_feature_menu_button_padding_vertical"
+                            android:src="@drawable/video_menu_doc_button" />
+
+                        <ImageView
+                            android:id="@+id/in_meeting_menu_show_app_share_button_notificator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/in_meeting_menu_show_app_share_button"
+                            android:layout_alignRight="@+id/in_meeting_menu_show_app_share_button"
+                            android:layout_alignTop="@+id/in_meeting_menu_show_app_share_button"
+                            android:src="@drawable/red_nofificator" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/menu_button_container"
+                    android:layout_alignRight="@+id/menu_button_container"
+                    android:background="#cdcdcf"
+                    android:orientation="vertical"></LinearLayout>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/video_bottom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/local_surface_view_ly"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f6f6f6"
+                android:visibility="visible">
+
+                <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                    android:id="@+id/local_surface_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/video_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/ws_conference_activity_surface1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_item_text_color_gray"
+                    android:padding="1dp"
+                    android:visibility="visible">
+
+                    <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+
+                    <com.bizcom.vc.widget.MarqueeTextView
+                        android:id="@+id/ws_conference_activity_surface_text1"
+                        style="@style/Conference_surface_text_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ws_conference_activity_surface2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ws_conference_activity_surface1"
+                    android:background="@color/common_item_text_color_gray"
+                    android:padding="1dp"
+                    android:visibility="visible">
+
+                    <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:visibility="gone" />
+
+                    <com.bizcom.vc.widget.MarqueeTextView
+                        android:id="@+id/ws_conference_activity_surface_text2"
+                        style="@style/Conference_surface_text_style" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ws_conference_activity_surface3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ws_conference_activity_surface2"
+                    android:background="@color/common_item_text_color_gray"
+                    android:padding="1dp"
+                    android:visibility="visible">
+
+                    <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:visibility="gone" />
+
+                    <com.bizcom.vc.widget.MarqueeTextView
+                        android:id="@+id/ws_conference_activity_surface_text3"
+                        style="@style/Conference_surface_text_style" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ws_conference_activity_surface4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ws_conference_activity_surface3"
+                    android:background="@color/common_item_text_color_gray"
+                    android:padding="1dp"
+                    android:visibility="visible">
+
+                    <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:visibility="gone" />
+
+                    <com.bizcom.vc.widget.MarqueeTextView
+                        android:id="@+id/ws_conference_activity_surface_text4"
+                        style="@style/Conference_surface_text_style" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@mipmap/conf_video_bg2"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/text_jingyin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/n_mute"
+                    android:gravity="center"
+                    android:text="静音"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_touping"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@mipmap/cast_screen"
+                    android:gravity="center"
+                    android:text="投屏"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_manage_attendee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@mipmap/manage_members"
+                    android:gravity="center"
+                    android:text="管理成员"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_close_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@mipmap/rest"
+                    android:gravity="center"
+                    android:text="休息"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_jy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@mipmap/all_mute"
+                    android:gravity="center"
+                    android:text="一键禁言"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/text_gd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawableTop="@mipmap/ckass"
+                    android:gravity="center"
+                    android:text="下课"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_voice_manager"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/n_speaker"
+                    android:gravity="center"
+                    android:text="扬声器"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/conf_video_bg1"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:padding="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/img_header"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            fresco:roundAsCircle="true" />
+
+                        <TextView
+                            android:id="@+id/text_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxEms="5"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:id="@+id/text_course_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/text_talk_minute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/converse_camera_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="130dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/converse_camera_button" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/video_headers_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right_remotes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/video_layout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp" />
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/ws_conference_appShare_surfaceView_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+                android:id="@+id/ws_conference_appShare_surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ws_conference_appShare_surfaceView_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:padding="20dp"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

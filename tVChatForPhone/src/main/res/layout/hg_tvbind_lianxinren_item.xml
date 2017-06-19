@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_firstNameTxet"
+        android:layout_width="@dimen/width_15_80"
+        android:layout_height="@dimen/width_15_80"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/root_main_tongxunlu_nor"
+        android:gravity="center"
+        android:text="周"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/width_15_80"
+        android:gravity="center|left"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv_firstNameTxet"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_nameTxet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="奥巴马"
+            android:textSize="@dimen/text_size_3"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_numberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_3"
+            android:text="13533334444"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/width_6_80"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp" >
+
+            <ImageView
+                android:layout_width="@dimen/width_4_80"
+                android:layout_height="@dimen/width_4_80"
+                android:background="@drawable/root_videochat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="视频聊天"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+            <ImageView
+                android:layout_width="@dimen/width_4_80"
+                android:layout_height="@dimen/width_4_80"
+                android:background="@drawable/root_addfriend_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="添加好友"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

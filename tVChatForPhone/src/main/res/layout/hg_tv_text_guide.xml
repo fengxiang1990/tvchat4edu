@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TV聊简介"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_7" />
+
+            <TextView
+                android:id="@+id/tv_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="tttt"
+                android:textColor="@android:color/black"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/tv_content2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_guide_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="绑定TV流程"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_7" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#eee" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="1 打开IPTV机顶盒，找到TV聊图标并点击(OK/确定)键。"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_45_80"
+            android:layout_marginTop="@dimen/width_3_80"
+            android:background="@drawable/pic1" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:text="2 点击“开通”按钮,进入到TV聊通讯录界面。"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_48_80"
+            android:layout_marginTop="@dimen/width_3_80"
+            android:background="@drawable/pic2" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_60_80"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:background="@drawable/pic3"
+            android:text="3 打开TV聊，进入 “TV协助”界面，点击“扫一扫”按钮，扫描电视左下角的二维码。"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:text="4 扫码绑定TV成功之后，在TV界面点击添加好友或者在TV聊APP上直接点击“发送到TV”按钮。"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_70_80"
+            android:layout_marginTop="@dimen/width_3_80"
+            android:background="@drawable/pic4" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:text="5 添加好友到TV界面后，选中好友头像并按OK/确定键即可向对方发起视频通话邀请。"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_45_80"
+            android:layout_marginTop="@dimen/width_3_80"
+            android:background="@drawable/p5" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_30_80" />
+    </LinearLayout>
+
+</ScrollView>

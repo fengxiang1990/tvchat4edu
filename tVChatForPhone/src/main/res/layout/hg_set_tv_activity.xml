@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ws_about_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_activity_backgroud"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners_input_shape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@mipmap/ss" />
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="输入TV号码"
+                android:imeActionLabel="搜索"
+                android:imeOptions="actionSearch"
+                android:inputType="number"
+                android:padding="6dp"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@mipmap/clear_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tv_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/tv_img"
+            style="@style/HeadPortrait"
+            fresco:placeholderImage="@drawable/avatar"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/H1"
+            android:text="事实上" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            style="@style/H2"
+            android:drawableLeft="@mipmap/tv_icon"
+            android:text="2324242" />
+    </LinearLayout>
+
+</FrameLayout>

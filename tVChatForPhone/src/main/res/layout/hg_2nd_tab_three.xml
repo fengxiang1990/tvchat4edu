@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_no_contact_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_no_contact_permission"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/view_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:scrollbars="@null" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.bizcom.vc.hg.view.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginBottom="@dimen/width_10_80"
+            android:layout_marginTop="@dimen/width_10_80"
+            android:background="@color/white" />
+    </FrameLayout>
+
+</LinearLayout>

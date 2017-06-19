@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/ws_common_activity_title_ly"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/common_activity_Title_background">
+
+    <TextView
+        android:id="@+id/ws_common_activity_title_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="75dp"
+        android:layout_toLeftOf="@+id/ws_activity_main_title_functionLy"
+        android:layout_toRightOf="@+id/ws_common_activity_title_left_button"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/common_activity_title_text_color"
+        android:textSize="@dimen/common_title_text_size"/>
+
+    <TextView
+        android:id="@+id/ws_common_activity_title_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin_horizontal_border"
+        android:textColor="@color/conf_create_button_color"
+        android:textSize="@dimen/common_item_text_size"/>
+
+    <TextView
+        android:id="@+id/ws_common_activity_title_left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+        android:textColor="@color/conf_create_button_color"
+        android:textSize="@dimen/common_item_text_size"/>
+    <!-- MainActivity 右边按钮  本来可以用ViewStub控件,但手机宽度会让标题内容覆盖控件 -->
+    <LinearLayout
+        android:id="@+id/ws_activity_main_title_functionLy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <include layout="@layout/activity_main_title_function"/>
+    </LinearLayout>
+</RelativeLayout>

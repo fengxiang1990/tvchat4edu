@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_corners_of_in_meeting_quit_window_outer_box"
+    android:gravity="center"
+    android:minHeight="160dp"
+    android:orientation="vertical"
+    android:padding="20dp" >
+    <TextView
+        android:id="@+id/contacts_group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/activiy_contact_group_dialog_title_create"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+    <com.bizcom.vc.widget.cus.edittext.ClearEditText
+        android:id="@+id/contacts_group_name"
+        style="@style/Com_Edittext_Style"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corners_create_conf_box_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/activiy_contact_group_add_hint"
+        android:inputType="text"
+        android:padding="1dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+    <LinearLayout
+        android:id="@+id/imq_l5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" >
+        <Button
+            android:id="@+id/contacts_group_confirm_button"
+            style="@style/Com_button_Style"
+            android:text="@string/activiy_contact_group_button_confirm" />
+        <Button
+            android:id="@+id/contacts_group_cancel_button"
+            style="@style/Com_button_Style"
+            android:layout_marginLeft="40dp"
+            android:text="@string/activiy_contact_group_button_cancel" />
+    </LinearLayout>
+</LinearLayout>

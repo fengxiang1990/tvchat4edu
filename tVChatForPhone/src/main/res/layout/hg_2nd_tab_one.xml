@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bizcom.vc.hg.view.GridViewWithHeaderAndFooter
+        android:id="@+id/gd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="15dp"
+        android:numColumns="4"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbars="none" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/loading_gif"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_add_friend_search"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emptyView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="没有搜索到这个人喔"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/view_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_friend_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="添加好友开启大屏视频聊天之旅吧~" />
+
+        <TextView
+            android:id="@+id/button_add_friend"
+            style="@style/BaseButton"
+            android:background="@drawable/btn_friend_call_selector"
+            android:layout_marginTop="30dp"
+            android:enabled="true"
+            android:text="添加好友" />
+    </LinearLayout>
+
+</RelativeLayout>

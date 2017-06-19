@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/common_activity_top_backgroud" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:layout_marginRight="@dimen/text_margin_left"
+        android:layout_toLeftOf="@+id/LinearLayout1" >
+        <include layout="@layout/common_conversation_layout" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/specific_voice_watchDetail"
+            style="@style/Com_button_Style"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/specific_voice_message_margin_right"
+            android:text="@string/specificItem_voice_watchDetail" />
+        <CheckBox
+            android:id="@+id/ws_specific_voice_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="@dimen/specific_voice_message_margin_right"
+            android:button="@drawable/selector_check_box"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+    </LinearLayout>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/common_margin_divider_left"
+        style="@style/Com_Normal_Divider_Style"/>
+</RelativeLayout>

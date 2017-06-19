@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conference_create_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <include layout="@layout/common_activity_title_layout" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cfcfcf"
+            android:orientation="vertical" >
+        </LinearLayout>
+        <include layout="@layout/common_create_error_connect_layout" />
+        <include layout="@layout/common_create_search_layout" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_activity_top_backgroud" >
+        <RelativeLayout
+            android:id="@+id/ws_common_create_custom_content_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_activity_top_backgroud"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <TextView
+                    android:id="@+id/ws_common_create_edit_name_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/activiy_group_create_edit_title"
+                    android:textSize="@dimen/common_item_text_size" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                        android:id="@+id/ws_common_create_edit_name_et"
+                        style="@style/Com_Edittext_Style"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="left"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:paddingLeft="5dp"
+                        android:nextFocusDown="@null"
+                        android:nextFocusForward="@null"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+                    </com.bizcom.vc.widget.cus.edittext.ClearEditText>
+                    <TextView
+                        style="@style/Com_Normal_EditText_Divider_Style"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ws_common_create_edit_below_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+                    <TextView
+                        android:id="@+id/ws_common_create_edit_content_hint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".3"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/activiy_group_create_edit_title"
+                        android:textSize="@dimen/common_item_text_size" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+                        <EditText
+                            android:id="@+id/conference_create_conf_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="left|center_vertical"
+                            android:inputType="datetime"
+                            android:textSize="@dimen/common_item_text_size" />
+                        <Spinner
+                            android:id="@+id/group_create_group_rule"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/common_item_text_size"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/ws_common_create_custom_content_ly"
+            android:background="@color/common_activity_backgroud"
+            android:orientation="vertical" >
+        </LinearLayout>
+        <com.bizcom.vc.widget.cus.MultilevelListView
+            android:id="@+id/ws_common_create_group_list_view"
+            style="@style/Com_MultilevelListView_Style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/divider3"
+            android:background="@color/common_activity_backgroud"
+            android:layout_below="@+id/divider2">
+        </com.bizcom.vc.widget.cus.MultilevelListView>
+        <TextView
+            android:id="@+id/divider3"
+            android:layout_above="@+id/ws_common_create_select_layout"
+            style="@style/Com_activity_title_Divider_Style"/>
+        <com.bizcom.vc.widget.HorizontalListView
+            android:id="@+id/ws_common_create_select_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:tag="horizontal" >
+        </com.bizcom.vc.widget.HorizontalListView>
+    </RelativeLayout>
+</LinearLayout>

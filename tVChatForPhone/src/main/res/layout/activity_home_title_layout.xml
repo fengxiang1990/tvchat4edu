@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ws_common_activity_title_ly"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/titlePerson"
+        android:layout_width="@dimen/action_img_header_wh"
+        android:layout_height="@dimen/action_img_header_wh"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        fresco:failureImage="@drawable/avatar"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/avatar"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true" />
+
+    <ImageView
+        style="@style/ActionImgHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/root_selfuserhead_defalt"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/width_4_80"
+        android:paddingLeft="@dimen/width_1_80"
+        android:paddingTop="@dimen/width_4_80"
+        android:src="@drawable/root_back_arow"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ws_common_activity_title_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="text"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ws_common_activity_title_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin_horizontal_border"
+        android:textColor="@color/conf_create_button_color"
+        android:textSize="@dimen/common_item_text_size" />
+
+    <TextView
+        android:id="@+id/ws_common_activity_title_left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+        android:textColor="@color/conf_create_button_color"
+        android:textSize="@dimen/common_item_text_size" />
+
+    <TextView
+        android:id="@+id/text_right_btn1"
+        android:text="发布课程"
+        android:textSize="15sp"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_marginRight="7dp"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/titleSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/width_3_80"
+        android:layout_toLeftOf="@+id/titleAdd"
+        android:src="@mipmap/search" />
+
+    <ImageView
+        android:id="@+id/titleAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/add" />
+
+    <ImageView
+        android:id="@+id/img_tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        android:src="@mipmap/ask" />
+
+</RelativeLayout>

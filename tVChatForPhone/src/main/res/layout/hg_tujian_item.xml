@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/width_4_80"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/_im"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_40_80"
+        android:background="@drawable/food1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_tuijian_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_10_80"
+            android:gravity="center_vertical"
+            android:text="美食"
+            android:textSize="@dimen/text_size_4"
+            android:textColor="@color/main_color" />
+
+        <TextView
+            android:id="@+id/tv_tuijian_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_10_80"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_4"
+            android:text="南瓜饼大饼" />
+
+        <TextView
+            android:id="@+id/tv_tuijian_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_10_80"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:text="69人看过" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	
+	<dimen name="text_size_0">6sp</dimen>
+	<dimen name="text_size_1">7sp</dimen>
+	<dimen name="text_size_2">8sp</dimen>
+	<dimen name="text_size_3">9sp</dimen>
+	
+	<dimen name="text_size_4">10sp</dimen>
+	<dimen name="text_size_5">11sp</dimen>
+	<dimen name="text_size_6">12sp</dimen>
+	<dimen name="text_size_7">13sp</dimen>
+	
+	<dimen name="text_size_8">14sp</dimen>
+	<dimen name="text_size_9">15sp</dimen>
+	<dimen name="text_size_10">16sp</dimen>
+	<dimen name="text_size_11">17sp</dimen>
+	
+	<dimen name="text_size_12">18sp</dimen>
+	<dimen name="text_size_13">19sp</dimen>
+	<dimen name="text_size_14">20sp</dimen>
+	<dimen name="text_size_15">21sp</dimen>
+	
+</resources>

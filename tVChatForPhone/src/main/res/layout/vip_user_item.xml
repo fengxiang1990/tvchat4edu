@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_vip"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="3dp"
+            fresco:placeholderImage="@color/black_light"
+            fresco:roundAsCircle="true" />
+
+        <ImageView
+            android:id="@+id/img_vip_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@mipmap/speak" />
+
+        <TextView
+            android:id="@+id/text_vip_status"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/edu_no_join_bg"
+            android:gravity="center"
+            android:text="未接通"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/text_vip_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="sss"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+</LinearLayout>

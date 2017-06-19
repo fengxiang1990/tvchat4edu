@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/activity_home_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_12_80"
+        android:layout_alignParentTop="true" />
+
+
+    <FrameLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/head_layout"
+        android:background="@android:color/transparent">
+
+        <fragment
+            android:name="com.bizcom.vc.hg.ui.HTab0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="35dp"
+            android:tag="htab0" />
+
+        <fragment
+            android:name="com.bizcom.vc.hg.ui.HTab1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="35dp"
+            android:tag="htab1" />
+
+        <fragment
+            android:name="com.bizcom.vc.hg.ui.HTab2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="35dp"
+            android:tag="htab2" />
+
+        <fragment
+            android:name="com.bizcom.vc.hg.ui.HTab3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="35dp"
+            android:tag="htab3" />
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@mipmap/root_tabbar_bg"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RadioButton
+                android:id="@+id/rb0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/buttomtab_course_selector"
+                android:gravity="center"
+                android:text="@string/htab0"
+                android:textColor="#999999"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/buttomtab_message_selector"
+                android:gravity="center"
+                android:text="@string/htab1"
+                android:textColor="#999999"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/buttomtab_org_selector"
+                android:gravity="center"
+                android:text="@string/htab2"
+                android:textColor="#999999"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/buttomtab_conference_selector"
+                android:gravity="center"
+                android:text="@string/htab3"
+                android:textColor="#999999"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/head_layout" />
+</RelativeLayout>

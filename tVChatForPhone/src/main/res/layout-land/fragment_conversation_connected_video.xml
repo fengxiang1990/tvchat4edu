@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 大画布 -->
+    <RelativeLayout
+        android:id="@+id/big_window_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+            android:id="@+id/fragment_conversation_connected_video_remote_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fitsSystemWindows="true" />
+    </RelativeLayout>
+
+    <!--<ImageView
+        android:id="@+id/connected_left_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/connecting_left_bg"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/connected_right_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:scaleType="centerCrop"
+        android:src="@drawable/connecting_right_bg"
+        android:visibility="gone" />-->
+
+
+    <!-- 操作按钮层 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/connected_bk_b"
+        android:gravity="bottom"
+        android:paddingBottom="5dp">
+
+        <include layout="@layout/connected_bt" />
+
+        <include layout="@layout/connected_bq" />
+
+        <include layout="@layout/connected_zt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/small_window_video_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:tag="small">
+
+        <com.bizcom.vc.activity.conference.ConferenceSurfaceView
+            android:id="@+id/fragment_conversation_connected_video_local_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/connected_bk_t"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/connected_call_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/connected_call_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/connected_camera_turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/n_camera_turn" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/connected_gif"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/connected_loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="视频正在接入中"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connected_video_close"
+        style="@style/TextShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="对方关闭了摄像头"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+    <include layout="@layout/include_send_img_progressbar" />
+</FrameLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/common_pop_up_arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/common_pop_window_out_container"
+        android:layout_marginBottom="@dimen/title_bar_triangle_margin_buttom"
+        android:src="@drawable/common_pop_up_arrow_up" />
+
+    <LinearLayout
+        android:id="@+id/common_pop_window_out_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_pop_up_arrow_up"
+        android:background="@drawable/rounded_corners_of_title_bar_popup_window_outer"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/common_pop_window_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@drawable/rounded_corners_of_title_bar_popup_window_inner"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/conference_activity_request_host_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/common_menu_item_padding_top_and_bottom"
+                android:paddingLeft="@dimen/common_menu_item_padding_left"
+                android:paddingRight="@dimen/common_menu_item_padding_right"
+                android:paddingTop="@dimen/common_menu_item_padding_top_and_bottom" >
+
+                <ImageView
+                    android:id="@+id/conference_activity_request_host_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_menu_item_drawable_text_distance"
+                    android:src="@drawable/host_request" />
+
+                <TextView
+                    android:id="@+id/conference_activity_request_host_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/confs_title_button_request_host_name"
+                    android:textColor="@color/common_item_text_color_black"
+                    android:textSize="@dimen/common_menu_text_font_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_line_color" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/video_quality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/common_menu_item_padding_top_and_bottom"
+                android:paddingLeft="@dimen/common_menu_item_padding_left"
+                android:paddingRight="@dimen/common_menu_item_padding_right"
+                android:paddingTop="@dimen/common_menu_item_padding_top_and_bottom" >
+
+                <ImageView
+                    android:id="@+id/video_attendee_device_lectrue_state_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_menu_item_drawable_text_distance"
+                    android:src="@drawable/setting_button" />
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/in_meeting_setting_video_qulity"
+                    android:textColor="@color/common_item_text_color_black"
+                    android:textSize="@dimen/common_menu_text_font_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_line_color" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/conference_activity_logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/common_menu_item_padding_top_and_bottom"
+                android:paddingLeft="@dimen/common_menu_item_padding_left"
+                android:paddingRight="@dimen/common_menu_item_padding_right"
+                android:paddingTop="@dimen/common_menu_item_padding_top_and_bottom" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_menu_item_drawable_text_distance"
+                    android:src="@drawable/logout_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/confs_title_button_logout_name"
+                    android:textColor="@color/common_item_text_color_black"
+                    android:textSize="@dimen/common_menu_text_font_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

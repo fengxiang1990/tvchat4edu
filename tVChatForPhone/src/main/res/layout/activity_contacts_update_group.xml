@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <include layout="@layout/common_activity_title_layout" />
+    <TextView style="@style/Com_activity_title_Divider_Style" />
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/contact_update_group_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <RadioGroup
+                android:id="@+id/contact_update_group_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

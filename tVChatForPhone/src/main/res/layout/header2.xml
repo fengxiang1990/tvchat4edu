@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/back_left_white" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_header"
+            style="@style/ActionImgHeader"
+            android:clickable="true"
+            android:visibility="invisible"
+            fresco:placeholderImage="@drawable/avatar"
+            fresco:roundAsCircle="true" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/text_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_ritht1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/back"
+            android:visibility="invisible" />
+    </FrameLayout>
+</LinearLayout>

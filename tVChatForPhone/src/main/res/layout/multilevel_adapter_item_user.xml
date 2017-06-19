@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_view_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ws_com_list_item_selector"
+    android:descendantFocusability="blocksDescendants" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+        <TextView
+            android:id="@+id/user_buttom_divider"
+            style="@style/Com_Normal_Divider_Style"
+            android:layout_alignLeft="@+id/user_name"
+            android:layout_alignParentBottom="true" />
+        <RelativeLayout
+            android:id="@+id/contact_user_img_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin_top_head_layout"
+            android:layout_marginStart="@dimen/common_margin_top_head_layout" >
+            <RelativeLayout
+                android:id="@+id/user_img_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+                <include layout="@layout/common_avatar" />
+            </RelativeLayout>
+            <com.bizcom.vc.widget.cus.V2ImageView
+                android:id="@+id/user_status_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignBottom="@+id/user_img_ly"
+                android:layout_alignEnd="@+id/user_img_ly"
+                android:layout_alignRight="@+id/user_img_ly"
+                android:src="@drawable/cell_phone_user" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/common_margin_horizontal"
+            android:layout_marginLeft="@dimen/common_margin_horizontal"
+            android:layout_marginRight="@dimen/common_margin_horizontal"
+            android:layout_marginStart="@dimen/common_margin_horizontal"
+            android:layout_toEndOf="@+id/contact_user_img_container"
+            android:layout_toRightOf="@+id/contact_user_img_container"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/contacts_user_view_text_max_width"
+            android:paddingLeft="@dimen/common_margin_horizontal_small"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/contacts_user_view_item_color_offline"
+            android:textSize="@dimen/common_item_text_size" />
+        <TextView
+            android:id="@+id/user_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/common_margin_horizontal"
+            android:layout_marginLeft="@dimen/common_margin_horizontal"
+            android:layout_marginRight="@dimen/common_margin_horizontal"
+            android:layout_marginStart="@dimen/common_margin_horizontal"
+            android:layout_toEndOf="@+id/user_name"
+            android:layout_toLeftOf="@+id/user_check_view"
+            android:layout_toRightOf="@+id/user_name"
+            android:layout_toStartOf="@+id/user_check_view"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/common_item_text_color_gray"
+            android:textSize="@dimen/common_item_text_size_low" />
+        <CheckBox
+            android:id="@+id/user_check_view"
+            style="@style/GraySquareCheckbox"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/conf_create_contacts_use_layout_name_margin_right"
+            android:layout_marginRight="@dimen/conf_create_contacts_use_layout_name_margin_right"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

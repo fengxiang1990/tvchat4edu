@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_activity_top_backgroud">
+    <include
+        android:id="@id/include1"
+        layout="@layout/common_activity_title_layout"></include>
+    <TextView
+        android:layout_below="@id/include1"
+        android:id="@+id/divider2"
+        style="@style/Com_activity_title_Divider_Style"/>
+    <LinearLayout
+        android:id="@+id/ws_searchlocal_first_tab"
+        android:layout_below="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin_top_head_layout"
+            android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+            android:layout_marginRight="@dimen/common_margin_horizontal_border"
+            android:layout_marginTop="@dimen/common_margin_top_head_layout">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search_icon"/>
+
+            <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                android:id="@+id/ws_searchlocal_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_margin_horizontal_10"
+                android:layout_toRightOf="@+id/imageView1"
+                android:background="#00000000"
+                android:hint="@string/common_search"
+                android:singleLine="true"
+                android:textColor="@color/common_search_text_color"
+                android:textSize="@dimen/common_item_text_size"/>
+
+            <TextView
+                style="@style/Com_Normal_Divider_Style"
+                android:layout_below="@+id/imageView1"
+                android:background="#bdbdbf"
+                android:layout_marginTop="@dimen/common_margin_verticial_10"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/ws_searchlocal_resultLy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_activity_backgroud">
+
+            <ListView
+                android:id="@+id/ws_searchlocal_results"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:divider="@null"
+                android:background="@color/common_activity_backgroud">
+            </ListView>
+
+            <RelativeLayout
+                android:id="@+id/ws_searchlocal_hintly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp">
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/search_activity_hint"
+                    android:textSize="@dimen/common_title_text_size"/>
+
+                <TextView
+                    android:id="@+id/textview2"
+                    style="@style/Com_Normal_Divider_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_alignLeft="@+id/imageview2"
+                    android:layout_alignRight="@+id/imageview5"
+                    android:layout_below="@+id/textview1"
+                    android:layout_marginBottom="40dp"
+                    android:background="#bdbdbf"/>
+
+                <ImageView
+                    android:id="@+id/imageview2"
+                    android:paddingLeft="@dimen/common_padding_horizontal"
+                    android:paddingRight="@dimen/common_padding_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview2"
+                    android:src="@drawable/ic_searchlocal_hint_contact"/>
+
+                <TextView
+                    android:id="@+id/textview3"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageview2"
+                    android:layout_alignLeft="@+id/imageview2"
+                    android:layout_alignRight="@+id/imageview2"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tab_org_name"
+                    android:textSize="@dimen/common_item_text_size"/>
+
+                <ImageView
+                    android:id="@+id/imageview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="@dimen/common_padding_horizontal"
+                    android:paddingRight="@dimen/common_padding_horizontal"
+                    android:layout_toRightOf="@+id/imageview2"
+                    android:layout_below="@+id/textview2"
+                    android:src="@drawable/ic_searchlocal_hint_group"/>
+
+                <TextView
+                    android:id="@+id/textview4"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageview2"
+                    android:layout_alignLeft="@+id/imageview3"
+                    android:layout_alignRight="@+id/imageview3"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tab_group_name"
+                    android:textSize="@dimen/common_item_text_size"/>
+
+                <ImageView
+                    android:id="@+id/imageview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview2"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="@dimen/common_padding_horizontal"
+                    android:paddingRight="@dimen/common_padding_horizontal"
+                    android:layout_toRightOf="@+id/imageview3"
+                    android:src="@drawable/ic_searchlocal_hint_message"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/imageview4"
+                    android:layout_alignRight="@+id/imageview4"
+                    android:layout_below="@+id/imageview2"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/tab_conversation_name"
+                    android:textSize="@dimen/common_item_text_size"/>
+
+                <ImageView
+                    android:id="@+id/imageview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview2"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="@dimen/common_padding_horizontal"
+                    android:paddingRight="@dimen/common_padding_horizontal"
+                    android:layout_toRightOf="@+id/imageview4"
+                    android:src="@drawable/ic_searchlocal_hint_conference"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/imageview5"
+                    android:layout_alignRight="@+id/imageview5"
+                    android:layout_below="@+id/imageview2"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/tab_conference_name"
+                    android:textSize="@dimen/common_item_text_size"/>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <ListView
+        android:visibility="gone"
+        android:layout_below="@+id/divider2"
+        android:id="@+id/ws_searchlocal_sencond_tab"
+        android:divider="@null"
+        android:background="@color/common_activity_backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

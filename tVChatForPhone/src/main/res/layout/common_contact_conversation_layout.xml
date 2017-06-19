@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+        android:layout_marginTop="20dp" >
+        <include layout="@layout/common_avatar" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/detail_detail_signature_margin_left"
+        android:layout_marginRight="@dimen/detail_detail_signature_margin_left"
+        android:layout_toEndOf="@+id/RelativeLayout_icon"
+        android:layout_toLeftOf="@+id/RelativeLayout2"
+        android:layout_toRightOf="@+id/RelativeLayout_icon"
+        android:layout_toStartOf="@+id/RelativeLayout2" >
+        <TextView
+            android:id="@+id/ws_common_contact_conversation_topContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="@dimen/detail_detail_name_max_width"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/activiy_contact_detail_item_color"
+            android:textSize="@dimen/common_item_text_size" />
+        <com.bizcom.vc.widget.MarqueeTextView
+            android:id="@+id/ws_common_contact_conversation_belowContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ws_common_contact_conversation_topContent"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/common_item_text_color_gray" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+        <!-- for ContactDetail2  添加或删除好友-->
+        <RelativeLayout
+            android:id="@+id/contact_user_detail_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/button_gap_horizontal"
+            android:layout_marginRight="@dimen/button_gap_horizontal"
+            android:paddingBottom="@dimen/detail_detail_2_button_padding_vertical"
+            android:paddingLeft="@dimen/button_padding_horizontal"
+            android:paddingRight="@dimen/button_padding_horizontal"
+            android:paddingTop="@dimen/detail_detail_2_button_padding_vertical">
+            <TextView
+                android:id="@+id/contact_user_detail_add_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ws_com_btn_selector"
+                android:gravity="center"
+                android:minWidth="110dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="@string/contacts_user_detail_add_friend"
+                android:textColor="@color/common_item_text_color"
+                android:textSize="@dimen/common_item_text_size_low"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/contact_user_detail_delete_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ws_com_btn_selector"
+                android:gravity="center"
+                android:minWidth="110dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="@string/contacts_user_detail_delete_friend"
+                android:textColor="@color/common_item_text_color"
+                android:textSize="@dimen/common_item_text_size_low"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!-- for ContactDetail  验证状态文字，同意或拒绝按钮-->
+        <RelativeLayout
+            android:id="@+id/contact_user_detail_head_company"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/common_margin_horizontal_border"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/contact_user_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/common_item_text_color_gray"
+                    android:visibility="gone"
+                    android:textSize="@dimen/common_item_text_size"/>
+                <TextView
+                    android:id="@+id/authentication_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/common_item_text_color_gray"
+                    android:textSize="@dimen/common_item_text_size"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/access"
+                    style="@style/Com_button_Style"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/crowd_invitation_accept_button_name"
+                    android:visibility="gone"/>
+                <Button
+                    android:id="@+id/refuse"
+                    style="@style/Com_button_Style"
+                    android:layout_gravity="center"
+                    android:text="@string/crowd_invitation_reject_button_name"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- for crowd_applicant_detail.xml -->
+        <RelativeLayout
+            android:id="@+id/common_contact_crowd_applicant_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_margin_horizontal_border"
+            android:visibility="gone" >
+            <FrameLayout
+                android:id="@+id/crowd_application_button_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+                <LinearLayout
+                    android:id="@+id/crowd_application_ly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:minWidth="185dp" >
+                    <TextView
+                        android:id="@+id/crowd_application_accept_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/crowd_invitation_box_right_margin"
+                        android:background="@drawable/ws_com_btn_selector"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/crowd_invitation_button_padding_vertical"
+                        android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                        android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                        android:paddingTop="@dimen/crowd_invitation_button_padding_vertical"
+                        android:text="@string/crowd_application_accept_button_name"
+                        android:textColor="@color/common_item_text_color"
+                        android:textSize="@dimen/common_item_text_size" />
+                    <TextView
+                        android:id="@+id/crowd_application_decline_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ws_com_btn_selector"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/crowd_invitation_button_padding_vertical"
+                        android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                        android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                        android:paddingTop="@dimen/crowd_invitation_button_padding_vertical"
+                        android:text="@string/crowd_application_reject_button_name"
+                        android:textColor="@color/common_item_text_color"
+                        android:textSize="@dimen/common_item_text_size" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/crowd_application_invite_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ws_com_btn_selector"
+                    android:gravity="center"
+                    android:minWidth="100dp"
+                    android:paddingBottom="@dimen/crowd_invitation_button_padding_vertical"
+                    android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                    android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                    android:paddingTop="@dimen/crowd_invitation_button_padding_vertical"
+                    android:text="@string/crowd_application_invite_button_name"
+                    android:textColor="@color/common_item_text_color"
+                    android:textSize="@dimen/common_item_text_size"
+                    android:visibility="gone" />
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/crowd_application_notes_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" >
+                <TextView
+                    android:id="@+id/crowd_application_detail_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/common_contact_layout_buttom"
+                    android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                    android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                    android:paddingTop="@dimen/common_contact_layout_top"
+                    android:text="@string/crowd_application_accepted"
+                    android:textColor="@color/common_item_text_color_gray"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- for crowd_application_activiy.xml -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/crowd_invitation_box_right_margin" >
+            <TextView
+                android:id="@+id/crowd_application_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ws_com_btn_selector"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/crowd_invitation_button_padding_vertical"
+                android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                android:paddingTop="@dimen/crowd_invitation_button_padding_vertical"
+                android:text="@string/crowd_application_button_name"
+                android:textColor="@color/common_item_text_color"
+                android:textSize="@dimen/common_item_text_size"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/crowd_application_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/crowd_invitation_button_padding_vertical"
+                android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                android:paddingTop="@dimen/crowd_invitation_button_padding_vertical"
+                android:text="@string/crowd_application_applyed"
+                android:textColor="@color/common_item_text_color_gray"
+                android:textSize="@dimen/common_item_text_size"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

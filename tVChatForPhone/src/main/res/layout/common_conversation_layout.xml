@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/ws_common_conversation_layout_iconLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+            <RelativeLayout
+                android:id="@+id/ws_common_conversation_layout_icon_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+                <include layout="@layout/common_avatar" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/ws_common_conversation_layout_notificator"
+                android:layout_width="@dimen/conversation_view_notification_size"
+                android:layout_height="@dimen/conversation_view_notification_size"
+                android:layout_alignEnd="@+id/ws_common_conversation_layout_icon_ly"
+                android:layout_alignRight="@+id/ws_common_conversation_layout_icon_ly"
+                android:layout_alignTop="@+id/ws_common_conversation_layout_icon_ly"
+                android:layout_marginEnd="@dimen/conversation_view_notification_margin"
+                android:layout_marginRight="@dimen/conversation_view_notification_margin"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/red_nofificator"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ws_common_conversation_layout_contentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ws_common_conversation_layout_iconLayout"
+            android:layout_marginLeft="@dimen/common_margin_horizontal"
+            android:layout_marginRight="@dimen/common_margin_horizontal_small"
+            android:layout_toEndOf="@+id/ws_common_conversation_layout_iconLayout"
+            android:layout_toRightOf="@+id/ws_common_conversation_layout_iconLayout" >
+            <LinearLayout
+                android:id="@+id/ws_common_conversation_layout_topLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+                <TextView
+                    android:id="@+id/ws_common_conversation_layout_topContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9999999"
+                    android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:text="topContent"
+                    android:textColor="@color/common_item_text_color_black"
+                    android:textSize="@dimen/common_item_text_size" />
+                <!-- VoiceMessageActivity.java conversation_view_name_text_size -->
+                <TextView
+                    android:id="@+id/ws_specific_voice_unreadNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="0.0000001"
+                    android:singleLine="true"
+                    android:text="( 0 )"
+                    android:textColor="@color/contacts_user_view_item_color_offline"
+                    android:textSize="@dimen/common_item_text_size"
+                    android:visibility="gone" />
+                <!-- VoiceMessageActivity.java -->
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ws_common_conversation_layout_belowLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_conversation_view_height"
+                android:orientation="horizontal" >
+                <!-- VoiceMessageActivity.java -->
+                <ImageView
+                    android:id="@+id/ws_specific_voice_direction_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:singleLine="true"
+                    android:src="@drawable/vs_voice_callout"
+                    android:visibility="gone" />
+                <!-- VoiceMessageActivity.java -->
+                <TextView
+                    android:id="@+id/ws_common_conversation_layout_belowContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:text="belowContent"
+                    android:textColor="@color/common_item_text_color_gray"
+                    android:textSize="@dimen/common_item_text_size_low" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/ws_common_conversation_middle_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin_horizontal"
+            android:layout_toEndOf="@+id/ws_common_conversation_layout_iconLayout"
+            android:layout_toRightOf="@+id/ws_common_conversation_layout_iconLayout"
+            android:ellipsize="end"
+            android:gravity="left|top"
+            android:maxEms="30"
+            android:singleLine="true"
+            android:textColor="@color/conversation_view_name_color"
+            android:textSize="@dimen/common_item_text_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/ws_common_conversation_buttomdivider"
+        android:visibility="gone"
+         android:layout_marginLeft="@dimen/common_edittext_margin_left"
+         android:layout_below="@+id/RelativeLayout1"
+         style="@style/Com_Normal_Divider_Style"/>
+</RelativeLayout>

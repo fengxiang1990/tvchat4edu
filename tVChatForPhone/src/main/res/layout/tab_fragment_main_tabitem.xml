@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_activity_backgroud"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/ws_main_fragment_main_tabitem_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_small_title_height"
+        android:background="@color/common_activity_top_backgroud" >
+        <ImageView
+            android:id="@+id/ws_main_fragment_main_tabitem_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_comlist_arrow_right" 
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin_horizontal_border" />
+        <TextView
+            android:id="@+id/ws_main_fragment_main_tabitem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+            android:layout_toRightOf="@+id/ws_main_fragment_main_tabitem_arrow"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/contacts_group_view_text_max_width"
+            android:singleLine="true"
+            android:text="企业通讯录"
+            android:textColor="@color/contacts_group_item_color"
+            android:textSize="@dimen/common_item_text_size" />
+        <TextView
+            android:id="@+id/ws_main_fragment_main_tabitem_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_margin_horizontal_border"
+            android:text="4/4"
+            android:textColor="@color/common_item_text_color_gray"
+            android:textSize="@dimen/common_item_text_size_low" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/ws_main_fragment_main_tabitem_divider1"
+        style="@style/Com_activity_title_Divider_Style"
+        android:layout_marginBottom="@dimen/com_fragment_contacts_margin_buttom" />
+    <TextView
+        android:id="@+id/ws_main_fragment_main_tabitem_divider2"
+        style="@style/Com_activity_title_Divider_Style" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/header2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_12_80"
+        android:layout_alignParentTop="true" />
+
+    <WebView
+        android:id="@+id/mWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head_layout" />
+
+    <TextView
+        android:id="@+id/vCodeText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="V1.1.1"
+        android:textColor="@color/common_item_text_color_black"
+        android:visibility="gone" />
+
+</RelativeLayout>

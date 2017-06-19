@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners_of_in_meeting_quit_window_outer_box"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/imq_l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/imq_l3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imq_l1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="1dp" >
+            <TextView
+                android:id="@+id/contacts_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/contacts_delete_confirm"
+                android:textColor="@color/activiy_contact_detail_title_color"
+                android:textSize="@dimen/common_title_text_size" >
+            </TextView>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/imq_l5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imq_l3"
+            android:layout_centerHorizontal="true" >
+            <Button
+                android:id="@+id/contacts_group_confirm_button"
+                style="@style/Com_button_Style"
+                android:text="@string/activiy_contact_group_button_confirm" />
+            <Button
+                android:id="@+id/contacts_group_cancel_button"
+                style="@style/Com_button_Style"
+                android:layout_marginLeft="40dp"
+                android:text="@string/activiy_contact_group_button_cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bizcom.vc.widget.cus.span.LinkClickTextView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:linkclick="http://schemas.android.com/apk/com.v2tech"
+    android:id="@+id/ws_link_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:autoLink="all"
+    android:background="@null"
+    android:maxWidth="255.0dip"
+    android:minWidth="52.0dip"
+    android:textColorLink="#4C70BB"
+    linkclick:textColorLinkClick="#FFFFFF" 
+    android:textAppearance="?android:textAppearanceSmall"
+    android:textSize="@dimen/common_item_text_size"/>

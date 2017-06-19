@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_backgroud" >
+    <include
+        android:id="@+id/linearLayout1"
+        layout="@layout/common_activity_title_layout"/>
+    <TextView
+        android:id="@id/divider1"
+        android:layout_below="@+id/linearLayout1"
+        style="@style/Com_activity_title_Divider_Style" />
+    <RelativeLayout
+        android:id="@+id/relativelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/divider1"
+        android:background="@color/common_activity_top_backgroud" >
+        <RelativeLayout
+            android:id="@+id/specific_voice_headIcon_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/conversation_view_margin"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/conversation_view_margin" >
+            <include layout="@layout/common_avatar" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/specific_voiceDetail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/specific_voice_headIcon_ly"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:text="王晓峰"
+            android:textColor="@color/conversation_view_name_color"
+            android:textSize="@dimen/common_item_text_size" />
+        <TextView
+            android:id="@+id/specific_voiceDetail_remark"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/specific_voiceDetail_name"
+            android:layout_below="@+id/specific_voiceDetail_name"
+            android:layout_marginTop="@dimen/conversation_view_title_margin"
+            android:ellipsize="end"
+            android:gravity="left|bottom"
+            android:maxWidth="@dimen/conversation_view_text_max_width"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/conversation_view_text_color"
+            android:textSize="@dimen/common_item_text_size" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textview2"
+        style="@style/Com_Normal_Divider_Style"
+        android:layout_below="@+id/relativelayout1"/>
+    <RelativeLayout
+        android:id="@+id/relativelayout3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textview2"
+        android:background="@color/common_activity_top_backgroud" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/conversation_view_margin"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/conversation_view_margin"
+            android:text="@string/specificItem_voiceDetail_phoneHistories"
+            android:textColor="@color/common_item_text_color_red"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/specific_voiceDetail_clearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/conversation_view_margin"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/conversation_view_margin"
+            android:text="@string/specificItem_voiceDetail_clearHistories"
+            android:textColor="#7e7f7e"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_activity_top_backgroud"
+        android:layout_below="@+id/relativelayout3">
+        <TextView
+            android:layout_marginLeft="@dimen/common_margin_divider_left_small"
+            style="@style/Com_Normal_Divider_Style"
+            android:id="@+id/divider2"/>
+        <ListView
+            android:layout_below="@+id/divider2"
+            android:layout_above="@+id/divider3"
+            android:id="@+id/specific_voiceDetail_listview"
+            style="@style/Com_ListView_NoDivider_Style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/divider3"
+            android:layout_above="@+id/linearLayout2"
+            style="@style/Com_activity_title_Divider_Style" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_activity_backgroud"
+            android:paddingTop="@dimen/common_padding_verticial_10"
+            android:paddingBottom="@dimen/common_padding_verticial_10"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:id="@+id/specific_voiceDetail_video_call_bottom_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin_verticial_small"
+                    android:src="@drawable/vs_voice_video_call" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contacts_user_detail_button_invite_video_call"
+                    android:textColor="@color/contact_detail_button_font_color"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/specific_voiceDetail_vioce_call_bottom_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin_verticial_small"
+                    android:src="@drawable/vs_voice_call" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contacts_user_detail_button_call"
+                    android:textColor="@color/contact_detail_button_font_color"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

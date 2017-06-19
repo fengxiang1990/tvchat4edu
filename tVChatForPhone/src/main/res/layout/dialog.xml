@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <!--<View-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:background="@drawable/migu_dlg_phone" />-->
+
+            <!--<View-->
+                <!--android:layout_width="2dp"-->
+                <!--android:layout_height="1dp" />-->
+
+            <TextView
+                android:id="@+id/contacts_user_detail_avatar_dialog_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yes"
+                android:textColor="@color/black_light"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView style="@style/Com_Normal_Divider_Style" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <!--<View-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:background="@drawable/migu_dlg_tv" />-->
+
+            <!--<View-->
+                <!--android:layout_width="2dp"-->
+                <!--android:layout_height="1dp" />-->
+
+            <TextView
+                android:id="@+id/contacts_user_detail_avatar_dialog_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="no"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#00000000" />
+
+    <TextView
+        android:id="@+id/contacts_user_detail_avatar_dialog_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:paddingTop="10dp"
+        android:text="取消"
+        android:textColor="@color/black_light"
+        android:textSize="16sp" />
+
+</LinearLayout>

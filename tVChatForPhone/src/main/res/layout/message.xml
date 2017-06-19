@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/ws_about_ly"
+    android:background="@color/common_activity_backgroud" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/common_activity_title_layout"/>
+    <TextView
+        android:id="@+id/divider1"
+        android:layout_below="@+id/include1"
+        style="@style/Com_activity_title_Divider_Style"/>
+    <ImageView
+        android:id="@+id/ws_about_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_marginTop="126dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_about" />
+        <TextView
+            android:layout_below="@+id/ws_about_logo"
+            android:id="@+id/ws_about_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_verticial_10"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="@dimen/about_text_size" />
+        <TextView
+            android:layout_below="@+id/ws_about_name"
+            android:id="@+id/about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common_margin_verticial_small"
+            android:text="1.3.0.303"
+            android:textColor="#666666"
+            android:textSize="@dimen/about_version_text_size" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ws_about_company_name"
+        android:layout_width="260dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="@dimen/common_item_text_size_low"
+        android:text="@string/login_title_copyright"
+        android:textColor="#666666" />
+</RelativeLayout>

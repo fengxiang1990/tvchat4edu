@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_backgroud"
+    android:orientation="vertical" >
+    <include layout="@layout/common_activity_title_layout" />
+    <TextView style="@style/Com_activity_title_Divider_Style" />
+    <LinearLayout
+        android:id="@+id/setting_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RadioGroup
+            android:id="@+id/rg_authentication"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/common_activity_top_backgroud"
+            android:checkedButton="@+id/rb_allow_anybogy"
+            android:orientation="vertical" >
+            <RadioButton
+                android:id="@+id/rb_allow_anybogy"
+                style="@style/RightRadioStyle"
+                android:layout_width="fill_parent"
+                android:paddingStart="@dimen/common_radio_button_margin_left"
+                android:paddingEnd="@dimen/common_radio_button_margin_right"
+                android:paddingLeft="@dimen/common_radio_button_margin_left"
+                android:paddingRight="@dimen/common_radio_button_margin_right"
+                android:text="@string/crowd_detail_qulification_rule_no_rule" />
+            <View
+                android:layout_marginLeft="@dimen/common_margin_divider_left_small"
+                style="@style/Com_Normal_Divider_Style" />
+            <RadioButton
+                android:id="@+id/rb_require_authorization"
+                style="@style/RightRadioStyle"
+                android:layout_width="fill_parent"
+                android:paddingStart="@dimen/common_radio_button_margin_left"
+                android:paddingEnd="@dimen/common_radio_button_margin_right"
+                android:paddingLeft="@dimen/common_radio_button_margin_left"
+                android:paddingRight="@dimen/common_radio_button_margin_right"
+                android:text="@string/conversation_select_file_entry_need_validation_messages" />
+            <View
+                android:layout_marginLeft="@dimen/common_margin_divider_left_small"
+                style="@style/Com_Normal_Divider_Style" />
+            <RadioButton
+                android:id="@+id/rb_unallow_anybogy"
+                style="@style/RightRadioStyle"
+                android:layout_width="fill_parent"
+                android:paddingStart="@dimen/common_radio_button_margin_left"
+                android:paddingEnd="@dimen/common_radio_button_margin_right"
+                android:paddingLeft="@dimen/common_radio_button_margin_left"
+                android:paddingRight="@dimen/common_radio_button_margin_right"
+                android:text="@string/crowd_detail_qulification_rule_never" />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/rg_video_mass"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:background="@color/common_activity_top_backgroud"
+            android:checkedButton="@+id/rb_mass_low"
+            android:orientation="vertical" >
+            <RadioButton
+                android:id="@+id/rb_mass_low"
+                style="@style/RightRadioStyle"
+                android:layout_width="fill_parent"
+                android:paddingStart="@dimen/common_radio_button_margin_left"
+                android:paddingEnd="@dimen/common_radio_button_margin_right"
+                android:paddingLeft="@dimen/common_radio_button_margin_left"
+                android:paddingRight="@dimen/common_radio_button_margin_right"
+                android:text="@string/confs_camear_quanlity_low" />
+            <View
+                android:layout_marginLeft="@dimen/common_margin_divider_left_small"
+                style="@style/Com_Normal_Divider_Style" />
+            <RadioButton
+                android:id="@+id/rb_mass_middle"
+                style="@style/RightRadioStyle"
+                android:layout_width="fill_parent"
+                android:paddingStart="@dimen/common_radio_button_margin_left"
+                android:paddingEnd="@dimen/common_radio_button_margin_right"
+                android:paddingLeft="@dimen/common_radio_button_margin_left"
+                android:paddingRight="@dimen/common_radio_button_margin_right"
+                android:text="@string/confs_camear_quanlity_middle" />
+            <View
+                android:layout_marginLeft="@dimen/common_margin_divider_left_small"
+                style="@style/Com_Normal_Divider_Style" />
+            <RadioButton
+                android:id="@+id/rb_mass_high"
+                style="@style/RightRadioStyle"
+                android:layout_width="fill_parent"
+                android:paddingStart="@dimen/common_radio_button_margin_left"
+                android:paddingEnd="@dimen/common_radio_button_margin_right"
+                android:paddingLeft="@dimen/common_radio_button_margin_left"
+                android:paddingRight="@dimen/common_radio_button_margin_right"
+                android:text="@string/confs_camear_quanlity_high" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

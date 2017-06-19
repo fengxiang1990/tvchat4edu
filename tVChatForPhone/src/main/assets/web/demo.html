@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>DEMO</title>
+</head>
+<body>
+<input type="button" value="返回" id="btn_back"/>
+<input type="button" value="分享" id="btn_share"/>
+<input type="button" value="进入课堂" id="btn_join"/>
+<script type="text/javascript" src="jquery-2.1.0.js"></script>
+<script type="text/javascript" src="bridge.js"></script>
+<script type="text/javascript">
+ $(function(){
+         $("#btn_back").click(function(){
+               back();
+         });
+         $("#btn_share").click(function(){
+               share();
+         });
+ $("#btn_join").click(function(){
+               join();
+         });
+
+ function join() {
+            window.WebViewJavascriptBridge.callHandler(
+                'joinConference'
+                , '1514847352550'
+                , function(responseData) {
+                }
+            );
+        }
+
+        function back() {
+            window.WebViewJavascriptBridge.callHandler(
+                'back'
+                , {'param': ''}
+                , function(responseData) {
+                }
+            );
+        }
+
+         function share() {
+           var title="text js share";
+           var msg="text js sharetext js sharetext js sharetext js share";
+           var url ="http://www.hao123.com";
+           var json  ={'title':title,'msg':msg,'url':url}
+           console.log(json)
+            window.WebViewJavascriptBridge.callHandler(
+                'share'
+                , json
+                , function(responseData) {
+                }
+            );
+        }
+});
+
+</script>
+
+</body>
+</html>

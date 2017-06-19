@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shdx.tvchat.phone"
+    android:sharedUserLabel="@string/app_name"
+    android:versionCode="9"
+    android:versionName="2.0.4">
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="22" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STOREAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--<uses-permission android:name="com.v2tech.v2commbar.permission.JPUSH_MESSAGE" />-->
+    <uses-permission android:name="com.shdx.tvchat.phone.permission.JPUSH_MESSAGE" />
+
+    <permission
+        android:name="com.shdx.tvchat.phone.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true"
+        tools:replace="android:smallScreens" />
+
+    <application
+        android:name="com.MainApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:allowBackup">
+
+        <!-- activity -->
+        <activity
+            android:name="com.bizcom.vc.activity.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.bizcom.vc.hg.ui.edu.MessageService" />
+
+        <activity
+            android:name="com.bizcom.vc.hg.ui.edu.WebCourseNoToolbarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.edu.ConferenceActivity2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.SyncFrendsToTvActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.UpdateTvInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.QRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.NickNamePhotoSettingActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.bizcom.vc.hg.ui.UpdateNickNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified">
+
+            <intent-filter>
+                <action android:name="com.bizcom.vc.hg.ui.HomeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bizcom.vc.hg.ui.MipcaActivityCapture"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity
+            android:name="com.bizcom.vc.activity.ConversationP2PAVActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.v2tech.start_p2p_conversation_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bizcom.vc.activity.contacts.clipavatar.ClipAvatarActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bizcom.vc.activity.conversation.ConversationSelectImageActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity
+            android:name="com.bizcom.vc.activity.WelcomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </activity>
+        <!-- service -->
+        <service android:name="com.bizcom.vc.hg.util.DownloadService"></service>
+        <service android:name="com.bizcom.service.JNIService"></service>
+        <service android:name="com.bizcom.request.util.ConferencMessageSyncService"></service>
+        <service android:name="com.bizcom.service.FileService"></service>
+        <service android:name="com.bizcom.service.LogService"></service>
+
+        <receiver
+            android:name="com.bizcom.broadcast.AvatarChangedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.v2tech.jni.broadcast.user_avatar_notification" />
+
+                <category android:name="com.v2tech.jni.broadcast" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </receiver>
+        <!-- provider -->
+        <provider
+            android:name="com.bizcom.db.V2techBaseProvider"
+            android:authorities="com.shdx.tvchat.phone"
+            android:exported="false" />
+
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HSearcActivity"
+            android:label="@string/title_activity_hsearc"></activity>
+        <activity
+            android:name="com.bizcom.vc.hg.ui.PersonalCenterActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_hsearc"
+            android:launchMode="singleTop"
+            android:screenOrientation="nosensor"></activity>
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HgRegsterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.ChangePwdActivity"
+            android:label="@string/title_activity_change_pwd"></activity>
+        <activity android:name="com.bizcom.vc.hg.ui.HgMessageActivity"></activity>
+        <activity android:name="com.bizcom.vc.hg.ui.GuideActivity"></activity>
+        <activity android:name="com.bizcom.vc.hg.ui.AboutUsActivity"></activity>
+        <activity android:name="com.bizcom.vc.hg.ui.GetPwdActivity"></activity>
+
+        <activity
+            android:name="com.bizcom.vc.hg.ui.UserDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.UpdateUserCommentNameActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.bizcom.vc.hg.ui.HgAddFriendActivity" />
+        android:screenOrientation="portrait"
+        <activity
+            android:name="com.bizcom.vc.hg.ui.SearchFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HgAddFriendsActivity"
+            android:label="@string/title_activity_hg_add_friends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HgAddFriendsConfirmActivity"
+            android:label="@string/title_activity_hg_add_friends"></activity>
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HgSearchTXLActivity"
+            android:label="@string/title_activity_hg_add_friends"></activity>
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HgFindTvActivity"
+            android:label="@string/title_activity_hg_add_friends"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.bizcom.vc.hg.ui.HgStartVideoByTvActivity"
+            android:label="@string/title_activity_hg_add_friends"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.bizcom.vc.hg.ui.Setp"
+            android:screenOrientation="portrait"></activity>
+
+
+        <!-- 极光推送 -->
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"></activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.bizcom.broadcast.JPushReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.shdx.tvchat.phone" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="2eef895d85619f66aa2c1d43" /> <!--  </>值来自开发者平台取得的AppKey-->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="583e4c6704e205b22a0006cd" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="HG" />
+
+    </application>
+
+</manifest>

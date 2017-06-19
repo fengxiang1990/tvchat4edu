@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+        <include layout="@layout/common_activity_title_layout" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" >
+            <RelativeLayout
+                android:id="@+id/crowd_invitation_icon_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/crowd_invitation_box_left_margin"
+                android:layout_marginStart="@dimen/crowd_invitation_box_left_margin" >
+                <include layout="@layout/common_avatar" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/crowd_invitation_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/crowd_invitation_icon_ly"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:maxWidth="@dimen/detail_detail_name_max_width"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/common_item_text_color_black"
+                android:textSize="@dimen/common_item_text_size" />
+            <LinearLayout
+                android:id="@+id/crowd_invitation_button_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_margin_horizontal_border" >
+                <TextView
+                    android:id="@+id/crowd_invitation_accept_button"
+                    style="@style/Com_button_Style"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/crowd_invitation_box_right_margin"
+                    android:text="@string/crowd_invitation_accept_button_name" />
+                <TextView
+                    android:id="@+id/crowd_invitation_decline_button"
+                    style="@style/Com_button_Style"
+                    android:layout_gravity="center"
+                    android:text="@string/crowd_invitation_reject_button_name" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/crowd_invitation_notes_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/crowd_invitation_box_right_margin"
+                android:visibility="gone" >
+                <TextView
+                    android:id="@+id/crowd_invitation_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/crowd_invitation_box_right_margin"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/crowd_invitation_button_padding_vertical"
+                    android:paddingLeft="@dimen/crowd_invitation_button_padding_horizontal"
+                    android:paddingRight="@dimen/crowd_invitation_button_padding_horizontal"
+                    android:paddingTop="@dimen/crowd_invitation_button_padding_vertical"
+                    android:text="@string/crowd_invitation_accept_notes"
+                    android:textColor="@color/common_item_text_color_gray"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/crowd_content_reject_reason_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+            android:layout_marginLeft="@dimen/contact_detail_2_item_margin_left"
+            android:layout_marginRight="@dimen/contact_detail_2_item_margin_right"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_corners_of_contact_user_detail_outer"
+            android:orientation="vertical" >
+            <com.bizcom.vc.widget.cus.edittext.ClearEditText
+                android:id="@+id/crowd_content_reject_reason_et"
+                style="@style/Com_Edittext_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:gravity="top|left"
+                android:hint="@string/crowd_invitation_reject_hints"
+                android:lines="3"
+                android:padding="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/crowd_invitation_additional_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+            android:layout_marginLeft="@dimen/contact_detail_2_item_margin_left"
+            android:layout_marginRight="@dimen/contact_detail_2_item_margin_right"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_corners_of_contact_user_detail_outer"
+            android:orientation="vertical"
+            android:visibility="gone" >
+            <TextView
+                android:id="@+id/crowd_invitation_additional_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="@color/activiy_contact_detail_item_color"
+                android:textSize="@dimen/common_item_text_size" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/crowd_invitation_box_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+            android:layout_marginLeft="@dimen/contact_detail_2_item_margin_left"
+            android:layout_marginRight="@dimen/contact_detail_2_item_margin_right"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_corners_of_contact_user_detail_outer"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                    android:padding="10dp"
+                    android:text="@string/crowd_application_item_no"
+                    android:textColor="@color/activiy_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+                <TextView
+                    android:id="@+id/crowd_invitation_crowd_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                    android:padding="10dp"
+                    android:text="@string/crowd_application_item_no"
+                    android:textColor="@color/activiy_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0" >
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                    android:padding="10dp"
+                    android:text="@string/crowd_invitation_box_item_creator"
+                    android:textColor="@color/activiy_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+                <TextView
+                    android:id="@+id/crowd_invitation_creator_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                    android:padding="10dp"
+                    android:text="@string/crowd_invitation_box_item_creator"
+                    android:textColor="@color/activiy_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0" >
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                    android:padding="10dp"
+                    android:text="@string/crowd_invitation_box_item_brief"
+                    android:textColor="@color/activiy_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+                <TextView
+                    android:id="@+id/crowd_invitation_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                    android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                    android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                    android:padding="10dp"
+                    android:text="@string/crowd_invitation_box_item_brief"
+                    android:textColor="@color/activiy_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/crowd_invitation_accepted_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0" >
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                        android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                        android:padding="10dp"
+                        android:text="@string/crowd_invitation_box_item_announcement"
+                        android:textColor="@color/activiy_contact_detail_item_color"
+                        android:textSize="@dimen/common_item_text_size" />
+                    <TextView
+                        android:id="@+id/crowd_invitation_announcement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                        android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                        android:padding="10dp"
+                        android:text="@string/crowd_invitation_box_item_announcement"
+                        android:textColor="@color/activiy_contact_detail_item_color"
+                        android:textSize="@dimen/common_item_text_size" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0" >
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ws_crowd_invite_member_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                        android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                        android:padding="10dp"
+                        android:text="@string/crowd_invitation_box_item_member"
+                        android:textColor="@color/activiy_contact_detail_item_color"
+                        android:textSize="@dimen/common_item_text_size" />
+                    <TextView
+                        android:id="@+id/crowd_invitation_members"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/detail_detail_2_item_margin_bottom"
+                        android:layout_marginLeft="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginRight="@dimen/contact_detail_2_item_margin_horizontal"
+                        android:layout_marginTop="@dimen/detail_detail_2_item_margin_top"
+                        android:padding="10dp"
+                        android:text="@string/crowd_invitation_box_item_member"
+                        android:textColor="@color/activiy_contact_detail_item_color"
+                        android:textSize="@dimen/common_item_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

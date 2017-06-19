@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34dp"
+            android:background="@mipmap/bg_header"></LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_tv_header"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                fresco:placeholderImage="@mipmap/y"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/text_tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="55"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </FrameLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+
+        <RelativeLayout
+            android:id="@+id/tv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTVid"
+                style="@style/H2"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/tv_icon"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:rotation="180"
+                android:src="@mipmap/back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <Button
+            android:id="@+id/btn_sync"
+            style="@style/BaseButton"
+            android:text="同步好友到TV" />
+
+        <TextView
+            android:id="@+id/text_sync"
+            style="@style/H3"
+            android:layout_below="@+id/btn_sync"
+            android:layout_centerHorizontal="true"
+            android:text="上次同步时间" />
+
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/mList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#ddd"
+        android:scrollbars="none"
+        android:visibility="gone"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+</LinearLayout>

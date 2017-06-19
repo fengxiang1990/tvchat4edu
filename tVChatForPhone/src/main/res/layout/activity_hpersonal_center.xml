@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_45_80"
+                android:layout_marginBottom="50dp"
+                android:background="@mipmap/bg_header"
+                android:orientation="vertical">
+
+                <include layout="@layout/header" />
+
+                <LinearLayout
+                    android:id="@+id/ll_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/user_head_icon"
+                        style="@style/HeadPortrait"
+                        android:src="@drawable/root_center_user_head"
+                        fresco:roundAsCircle="true" />
+
+                    <LinearLayout
+                        android:id="@+id/ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowColor="#40000000"
+                            android:shadowDx="0"
+                            android:shadowDy="5"
+                            android:shadowRadius="1"
+                            android:singleLine="true"
+                            android:text="奥巴马"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_hasRegsted"
+                            android:layout_width="@dimen/width_8_80"
+                            android:layout_height="@dimen/width_3_80"
+                            android:layout_marginLeft="6dp"
+                            android:background="@drawable/root_zhuce_bg"
+                            android:gravity="center"
+                            android:text="已注册"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_phone_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:shadowColor="#40000000"
+                            android:shadowDx="0"
+                            android:shadowDy="5"
+                            android:shadowRadius="1"
+                            android:singleLine="true"
+                            android:text="1383838438"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end|center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_qrcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ewm" />
+
+                        <ImageView
+                            android:id="@+id/img_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:src="@mipmap/bk" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/g"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_friend_num"
+                        style="@style/H1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/text_friend"
+                        style="@style/H3"
+                        android:text="好友" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#b4b4b4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_contact_always_num"
+                        style="@style/H1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/text_contact_always"
+                        style="@style/H3"
+                        android:text="常联系" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#b4b4b4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_talk_minute_num"
+                        style="@style/H1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/text_talk_minute"
+                        style="@style/H3"
+                        android:text="通话/分钟" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_modify_pwd"
+            style="@style/UserCenterMenu">
+
+            <TextView
+                style="@style/H1"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/user_center_1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|start"
+                android:text="修改密码" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <LinearLayout
+            android:id="@+id/ll_message"
+            style="@style/UserCenterMenu">
+
+            <TextView
+                style="@style/H1"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/user_center_2"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|start"
+                android:text="消息" />
+
+            <TextView
+                android:id='@+id/text_msg_num'
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/m"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <LinearLayout
+            android:id="@+id/ll_help"
+            style="@style/UserCenterMenu">
+
+            <TextView
+                style="@style/H1"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/user_center_3"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|start"
+                android:text="使用帮助" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <LinearLayout
+            android:id="@+id/ll_about"
+            style="@style/UserCenterMenu">
+
+            <TextView
+                style="@style/H1"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/user_center_4"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|start"
+                android:text="关于我们" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <LinearLayout
+            android:id="@+id/ll_customer_service"
+            style="@style/UserCenterMenu">
+
+            <TextView
+                style="@style/H1"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/user_center_5"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|start"
+                android:text="客服热线" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_version"
+        style="@style/H3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="版本号:1.0" />
+</RelativeLayout>

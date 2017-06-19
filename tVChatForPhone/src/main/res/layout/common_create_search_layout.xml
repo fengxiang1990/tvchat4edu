@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_activity_top_backgroud"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+    <com.bizcom.vc.widget.cus.edittext.ClearEditText
+        android:id="@+id/ws_common_create_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/common_margin_horizontal_border"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/common_color_transparent"
+        android:drawableRight="@drawable/txt_search_clear"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:paddingLeft="40dp"
+        android:textColor="@color/common_search_text_color"
+        android:textSize="@dimen/common_item_text_size" />
+    <TextView
+        android:layout_below="@+id/ws_common_create_search"
+        style="@style/Com_Normal_EditText_Divider_Style"
+        android:layout_marginLeft="@dimen/common_margin_horizontal"
+        android:layout_marginRight="@dimen/common_margin_horizontal"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ws_common_create_search"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:src="@drawable/search_icon" />
+</RelativeLayout>

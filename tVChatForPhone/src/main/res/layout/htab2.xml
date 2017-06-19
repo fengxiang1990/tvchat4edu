@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/slidingTab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        tl:tl_indicator_bounce_enable="true"
+        tl:tl_indicator_color="#F8664F"
+        tl:tl_indicator_gravity="BOTTOM"
+        tl:tl_indicator_height="2dp"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textSelectColor="#F8664F"
+        tl:tl_textUnselectColor="#66000000"
+        tl:tl_textsize="16sp"
+        tl:tl_underline_color="#CACACA"
+        tl:tl_underline_gravity="BOTTOM"
+        tl:tl_underline_height="1px" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/slidingTab"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_7_80"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/width_2_80"
+        android:layout_marginRight="@dimen/width_2_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_7_80"
+            android:layout_weight="1"
+            android:background="@drawable/left_bg"
+            android:text="我的好友"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_7_80"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="最近通话"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_7_80"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="手机通讯录"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

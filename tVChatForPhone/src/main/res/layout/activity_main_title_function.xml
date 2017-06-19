@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content" >
+    <ImageView
+        android:id="@+id/ws_activity_main_function_title_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common_padding_horizontal"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="@dimen/common_padding_horizontal"
+        android:paddingTop="@dimen/common_padding_horizontal"
+        android:src="@drawable/title_bar_feature_more_button_selector" />
+    <ImageView
+        android:id="@+id/ws_activity_main_function_title_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common_padding_horizontal"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="@dimen/common_padding_horizontal"
+        android:paddingTop="@dimen/common_padding_horizontal"
+        android:src="@drawable/title_bar_plus_button_selector" />
+    <ImageView
+        android:id="@+id/ws_common_activity_title_function_more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_margin_horizontal_border"
+        android:src="@drawable/ic_comtitle_person"
+        android:textColor="@color/conf_create_button_color"
+        android:textSize="@dimen/common_item_text_size" />
+</LinearLayout>

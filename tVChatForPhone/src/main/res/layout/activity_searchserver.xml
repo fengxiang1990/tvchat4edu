@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_backgroud"
+    android:orientation="vertical" >
+    <include layout="@layout/common_activity_title_layout" />
+    <TextView style="@style/Com_activity_title_Divider_Style" />
+    <com.bizcom.vc.widget.cus.edittext.ClearEditText
+        android:id="@+id/search_text"
+        android:layout_marginTop="@dimen/common_margin_top_head_layout"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+        android:layout_marginRight="@dimen/common_margin_horizontal_border"
+        style="@style/Com_Edittext_Style"
+        android:paddingLeft="@dimen/common_margin_horizontal_10"
+        android:background="@drawable/ws_com_edittext_bg"
+        android:drawableRight="@drawable/txt_search_clear"
+        android:imeOptions="actionDone"
+        android:hint="@string/search_activity_edittext_hint"
+        android:inputType="text"
+        android:textCursorDrawable="@drawable/ws_searchactivity_edittextcursor_color"
+        android:maxLines="1"
+        android:minLines="1"/>
+    <TextView
+        android:id="@+id/search_search_button"
+        style="@style/Com_button_Style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/common_margin_verticial"
+        android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+        android:layout_marginRight="@dimen/common_margin_horizontal_border"
+        android:text="@string/search_search_button" />
+</LinearLayout>

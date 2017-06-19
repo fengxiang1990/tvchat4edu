@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/re_firstNameTxet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_15_80" >
+
+            <ImageView
+                android:id="@+id/tv_firstNameTxet"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_15_80"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/root_main_tongxunlu_nor"
+                />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="@dimen/width_7_80"
+                android:layout_height="13dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="2dp"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:text="在线"
+                android:textColor="@color/white"
+                android:textSize="9dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_15_80"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/re_firstNameTxet"
+            android:gravity="center|left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_nameTxet"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/width_40_80"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:text="奥巴马"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/tv_numberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13533334444"
+                android:textColor="@color/main_color_grag"
+                android:textSize="@dimen/text_size_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_sendTotv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp" >
+
+                <ImageView
+                   android:layout_width="25dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/root_tv_fstv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="发送到tv"
+                     android:textColor="@color/main_color_grag"
+                    android:textSize="@dimen/text_size_1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp" >
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/root_tv_delete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="从tv列表删除"
+                    android:textColor="@color/main_color_grag"
+                    android:textSize="@dimen/text_size_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_startCom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp" >
+
+                <ImageView
+                   android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/root_videochat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="视频聊天"
+                    android:textColor="@color/main_color_grag"
+                    android:textSize="@dimen/text_size_1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/width_18_80"
+        android:background="#eeee" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_16_80" />
+
+</LinearLayout>

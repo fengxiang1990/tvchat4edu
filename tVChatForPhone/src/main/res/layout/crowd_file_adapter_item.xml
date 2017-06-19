@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/contact_user_view_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/conversation_view_margin"
+        android:layout_marginTop="@dimen/conversation_view_margin" >
+        <ImageView
+            android:id="@+id/ic_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/common_margin_horizontal_border"
+            android:paddingBottom="@dimen/common_delete_icon_padding"
+            android:paddingRight="@dimen/common_delete_icon_padding"
+            android:paddingTop="@dimen/common_delete_icon_padding"
+            android:src="@drawable/ic_delete"
+            android:visibility="visible" />
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_horizontal_10"
+            android:layout_marginRight="@dimen/common_margin_horizontal_10"
+            android:layout_toLeftOf="@+id/crowd_file_button"
+            android:layout_toRightOf="@+id/ic_delete" >
+            <include layout="@layout/common_conversation_layout" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/crowd_file_button"
+            style="@style/Com_button_Style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/button_gap_horizontal"
+            android:text="@string/crowd_files_button_name_download" />
+        <TextView
+            android:id="@+id/crowd_file_delete_button"
+            style="@style/Com_button_Style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/button_gap_horizontal"
+            android:background="@drawable/rounded_corners_contacts_group_delete_button"
+            android:text="@string/activiy_contact_group_item_button_delete"
+            android:textColor="@color/common_white_color" />
+        <TextView
+            android:id="@+id/crowd_file_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/button_gap_horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/button_padding_vertical"
+            android:paddingLeft="@dimen/button_padding_horizontal"
+            android:paddingRight="@dimen/button_padding_horizontal"
+            android:paddingTop="@dimen/button_padding_vertical"
+            android:text="@string/crowd_files_button_name_download"
+            android:textSize="@dimen/common_item_text_size" />
+        <ImageView
+            android:id="@+id/crowd_file_failed_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/RelativeLayout2"
+            android:layout_alignLeft="@+id/crowd_file_delete_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/RelativeLayout2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/button_gap_horizontal"
+            android:paddingBottom="@dimen/crowd_file_fail_icon"
+            android:paddingTop="@dimen/crowd_file_fail_icon"
+            android:src="@drawable/message_sent_failed_icon" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/crowd_file_item_progrss_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/conversation_view_margin"
+            android:layout_marginLeft="@dimen/common_margin_horizontal"
+            android:layout_marginRight="@dimen/common_margin_horizontal"
+            android:layout_marginTop="@dimen/conversation_view_margin" >
+            <TextView
+                android:id="@+id/file_process_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/button_padding_vertical"
+                android:paddingTop="@dimen/button_padding_vertical"
+                android:text="200.0K/3.2M"
+                android:textColor="@color/file_download_prgress_color" />
+            <TextView
+                android:id="@+id/file_velocity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/button_padding_vertical"
+                android:paddingTop="@dimen/button_padding_vertical"
+                android:text="0K/S"
+                android:textColor="@color/file_download_prgress_color" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/file_download_progress_state_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/message_file_progress_bg"
+            android:orientation="horizontal" >
+            <ImageView
+                android:id="@+id/ile_download_progress_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/message_file_progress"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/contact_group_view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#f8664f</color>
+    <color name="colorAccent">#f8664f</color>
+    <color name="colorPressed">#ec543c</color>
+
+    <color name="common_activity_Title_background">#FAFAFA</color>
+    <color name="common_activity_backgroud">#EFEFF4</color>
+    <color name="common_activity_top_backgroud">#FFFFFF</color>
+    <color name="common_divider_color_gray">#f2f2f2</color>
+    <color name="common_activity_Title_divider_background">#D7D7D7</color>
+
+    <!-- activity title text color -->
+    <color name="common_activity_title_text_color">#000000</color>
+    <color name="common_activity_title_text_color_blue">#000000</color>
+
+    <!-- MainActivity 底部tab的字体颜色 -->
+    <color name="text_tab_selected">#EF654F</color>
+    <color name="text_tab_unselected">#8c8c8c</color>
+    <color name="common_item_text_color">#ffffff</color>
+    <color name="common_item_text_color_blue">#40affc</color>
+    <color name="common_item_text_color_deep_blue">#007aff</color>
+    <color name="common_item_text_color_blue_press">#0055B2</color>
+    <color name="common_item_text_color_gray">#929394</color>
+    <color name="common_item_text_color_deep_gray">#D7D7D7</color>
+    <color name="common_item_text_color_black">#000000</color>
+    <color name="common_item_text_color_red">#ff0000</color>
+    <color name="common_search_text_color">#858585</color>
+    <color name="in_meeting_title_bar_bg">#229dd6</color>
+    <color name="in_meeting_group_list_bg">#ffffff</color>
+    <color name="in_meeting_widget_separation_line">#f2f2f2</color>
+    <color name="in_meeting_setting_bg">#ffffff</color>
+    <color name="in_meeting_quit_window_inner_bg">#ffffff</color>
+    <color name="in_meeting_quit_window_separation">#cad2d9</color>
+    <color name="in_meeting_quit_window_title_bg">#ebf3f7</color>
+    <color name="in_meeting_doc_list_separation">#cad2d9</color>
+    <color name="in_meeting_doc_list_activited_doc_bg">#ebf3f7</color>
+    <color name="logo_background">#ffffff</color>
+    <color name="setting_outer_bg">#b8c9d4</color>
+    <color name="setting_inner_bg">#ffffff</color>
+    <color name="setting_separation">#f2f2f2</color>
+    <color name="contacts_user_view_under_line">#dbdbdb</color>
+    <color name="contacts_user_view_bg">#f0f0f0</color>
+    <color name="contacts_user_group_bg">#f5f5f5</color>
+    <color name="contacts_user_detail_item_bg">#ffffff</color>
+    <color name="contacts_user_detail_text_color">#0099ff</color>
+    <color name="confs_panel_bg">#363636</color>
+    <color name="confs_search_bar_bg">#eff0f2</color>
+    <color name="confs_group_list_bg">#ffffff</color>
+    <color name="confs_common_bg">#eff0f3</color>
+    <color name="confs_group_widget_separation_line">#f2f2f2</color>
+    <color name="conference_message_list_view_item_text1_color">#000000</color>
+
+    <!-- 弹出菜单文本颜色 -->
+    <color name="common_menu_text_color_gray_123">#7b7b7b</color>
+    <color name="common_return_button_color">#057aff</color>
+    <color name="common_confirm_button_color">#057aff</color>
+    <color name="button_text_color_blue">#007aff</color>
+    <color name="in_meeting_camera_setting_progress_bar">#c2c2c2</color>
+    <color name="common_line_color">#cdcdcf</color>
+    <color name="contact_detail_button_font_color">#057aff</color>
+    <color name="conf_create_button_color">#057aff</color>
+    <color name="conf_create_button_unclick_color">#8c8c8c</color>
+    <color name="activiy_contact_detail_title_color">#000000</color>
+    <color name="contacts_group_item_color">#444444</color>
+    <color name="activiy_contact_detail_item_color">#444444</color>
+    <color name="activiy_contact_detail_item_content_color">#444444</color>
+    <color name="activiy_contact_item_color">#444444</color>
+    <color name="activiy_contact_item_content_color">#444444</color>
+    <color name="common_color_transparent">#00000000</color>
+    <color name="common_color_light_blue">#66CCFF</color>
+
+    <!-- group create activity -->
+    <color name="activiy_group_create_edit_title">#444444</color>
+    <color name="contacts_user_view_item_color">#444444</color>
+    <color name="contacts_user_view_item_color_offline">#c2c2c2</color>
+    <color name="conversation_view_name_color">#444444</color>
+    <color name="conversation_view_text_color">#a2a2a2</color>
+    <color name="conference_msg_content_color">#444444</color>
+    <color name="invitation_attendee_layout_item_color">#444444</color>
+    <color name="conf_create_contacts_user_view_item_color">#444444</color>
+    <color name="conf_create_contacts_user_view_item_color_offline">#c2c2c2</color>
+    <color name="title_color">#000000</color>
+    <color name="common_gray_color_c2">#c2c2c2</color>
+    <color name="common_gray_color_c0">#c0c0c0</color>
+    <color name="common_gray_color_cd">#cdcdcf</color>
+    <color name="common_white_color">#ffffff</color>
+    <color name="video_attendee_chair_man_name_color">#019648</color>
+    <color name="video_attendee_name_color">#000000</color>
+    <color name="video_attendee_name_color_offline">#c2c2c2</color>
+    <color name="login_activity_login_box_text_color">#acacac</color>
+    <color name="attendee_select_bg">#bfe8ff</color>
+    <color name="conversation_selectfile_adapter_word">#000000</color>
+    <color name="file_download_prgress_color">#c2c2c2</color>
+    <color name="conference_host_requesting_text_color">#ffd200</color>
+    <color name="conference_acquired_host_text_color">#007aff</color>
+
+    <!-- sip -->
+    <color name="sip_number_press">#ff239efe</color>
+    <color name="sip_number_border">#44000000</color>
+
+    <!-- RegistActivity -->
+    <color name="regist_edit_hint">#E5E5E5</color>
+
+    <!-- SettingActivity -->
+    <color name="setting_com_backgroud">#f2f2f2</color>
+
+    <!-- SearchLocalActivity -->
+    <color name="searchlocal_message_final_tab">#656565</color>
+    <color name="list_selector">#943C3C</color>
+
+    <!-- ConversationP2PActivity -->
+    <color name="conversation_p2p_audio_calling_bg">#ebebf1</color>
+    <color name="fragment_conversation_title_text_color">#000000</color>
+    <color name="fragment_conversation_content_text_color">#ffffff</color>
+    <color name="fragment_conversation_connected_gray_text_color">#000000</color>
+    <color name="fragment_conversation_connected_pressed_text_color">#0079fe</color>
+    <color name="fragment_conversation_disable_text_color">#909090</color>
+
+    <!-- ConversationP2PActivity -->
+
+    <color name="htab1_line_red">#ff0000</color>
+    <color name="main_color">#EF654F</color>
+    <color name="main_color_grag">#708090</color>
+    <color name="main_color_bg_gray">#f6f6fa</color>
+    <color name="white">#fff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="touming">#00000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="text_phone_color">#6b6b6b</color>
+
+    <color name="black_light">#7b7b7b</color>
+
+</resources>

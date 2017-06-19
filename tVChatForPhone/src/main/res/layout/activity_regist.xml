@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/include1"
+        layout="@layout/common_activity_title_layout" />
+    <TextView
+        android:id="@+id/textview1"
+        style="@style/Com_activity_title_Divider_Style"
+        android:layout_below="@+id/include1" />
+    <com.bizcom.vc.widget.cus.V2ImageView
+        android:id="@+id/regist_icon"
+        android:layout_below="@id/textview1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_about"/>
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regist_icon"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <EditText
+            android:id="@+id/ws_regist_mobile"
+            android:layout_width="@dimen/regist_wholeLayout_width"
+            android:layout_height="@dimen/regist_common_height"
+            android:background="@drawable/ws_com_edittext_bg"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:paddingEnd="@dimen/common_padding_horizontal"
+            android:paddingLeft="@dimen/common_padding_horizontal"
+            android:paddingStart="@dimen/common_padding_horizontal"
+            android:text="@string/regist_edit_mobile"
+            android:textColor="@color/regist_edit_hint"
+            android:textSize="@dimen/common_title_text_size" />
+        <TextView
+            android:id="@+id/ws_regist_validate"
+            android:layout_width="@dimen/regist_validate_width"
+            android:layout_height="@dimen/regist_common_height"
+            android:layout_marginLeft="@dimen/common_margin_horizontal_small"
+            android:layout_marginStart="@dimen/common_margin_horizontal_small"
+            android:background="@drawable/regist_corner_button_normal"
+            android:gravity="center"
+            android:paddingLeft="@dimen/regist_validateBT_padding"
+            android:paddingRight="@dimen/regist_validateBT_padding"
+            android:text="@string/regist_validate"
+            android:textColor="@color/common_item_text_color"
+            android:textSize="@dimen/common_title_text_size" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/ws_regist_validate_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/regist_common_height"
+        android:layout_alignEnd="@+id/linearlayout1"
+        android:layout_alignLeft="@+id/linearlayout1"
+        android:layout_alignRight="@+id/linearlayout1"
+        android:layout_alignStart="@+id/linearlayout1"
+        android:layout_below="@+id/linearlayout1"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ws_com_edittext_bg"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:text="@string/regist_validate_text"
+        android:paddingEnd="@dimen/common_padding_horizontal"
+        android:paddingLeft="@dimen/common_padding_horizontal"
+        android:paddingStart="@dimen/common_padding_horizontal"
+        android:textColor="@color/regist_edit_hint"
+        android:textSize="@dimen/common_title_text_size" />
+    <TextView
+        android:id="@+id/ws_regist_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/regist_common_height"
+        android:layout_alignEnd="@+id/linearlayout1"
+        android:layout_alignLeft="@+id/linearlayout1"
+        android:layout_alignRight="@+id/linearlayout1"
+        android:layout_alignStart="@+id/linearlayout1"
+        android:layout_below="@+id/ws_regist_validate_edit"
+        android:layout_marginTop="@dimen/regist_cmmon_margin_top"
+        android:background="@drawable/regist_corner_button_normal"
+        android:gravity="center"
+        android:paddingLeft="@dimen/regist_validateBT_padding"
+        android:paddingRight="@dimen/regist_validateBT_padding"
+        android:text="@string/regist_over"
+        android:textColor="@color/common_item_text_color"
+        android:textSize="@dimen/common_title_text_size" />
+</RelativeLayout>

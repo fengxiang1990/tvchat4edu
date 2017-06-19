@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="integer" name="common_edit_text_max_length_30">30</item>
+    <item type="integer" name="common_edit_text_max_length_50">50</item>
+    <item type="integer" name="common_edit_text_max_length_100">100</item>
+</resources>

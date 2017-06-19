@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:minHeight="160dp"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/rounded_corners_of_in_meeting_quit_window_outer_box"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/dialog_title_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/in_meeting_quit_notification"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/ws_normalDialog_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/in_meeting_quit_text"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/common_dialog_text_size" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/ws_normalDialog_confirm"
+            style="@style/Com_button_Style"
+            android:text="@string/conversation_quit_dialog_confirm_text" />
+        <Button
+            android:id="@+id/ws_normalDialog_cannel"
+            style="@style/Com_button_Style"
+            android:layout_marginLeft="60dp"
+            android:text="@string/conversation_quit_dialog_cancel_text" />
+    </LinearLayout>
+</LinearLayout>

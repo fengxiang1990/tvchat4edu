@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl1"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+<!--  fresco:backgroundImage="@color/co"-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_pic"
+            style="@style/HeadPortrait"
+
+            fresco:placeholderImage="@drawable/root_center_user_head"
+            fresco:roundAsCircle="true" />
+
+        <ImageView
+            android:layout_marginRight="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:id="@+id/img_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@mipmap/ncheck" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_name"
+        style="@style/H1"
+        android:layout_below="@+id/fl1"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="妈妈" />
+
+    <TextView
+        android:id="@+id/text_account"
+        style="@style/H3"
+        android:layout_below="@+id/text_name"
+        android:layout_centerHorizontal="true"
+        android:text="13122712498" />
+</RelativeLayout>

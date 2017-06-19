@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/header2" />
+
+        <LinearLayout
+            android:id="@+id/img_modify_photo"
+            style="@style/UserCenterMenu"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/H1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="头像" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_header2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                fresco:backgroundImage="@drawable/avatar"
+                fresco:roundAsCircle="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <LinearLayout
+            android:id="@+id/img_modify_nickname"
+            style="@style/UserCenterMenu"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/H1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="昵称" />
+
+
+            <TextView
+                android:id="@+id/text_nickname"
+                style="@style/H2"
+                android:singleLine="true"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@mipmap/disclosure_arrow" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <LinearLayout
+            android:id="@+id/img_qrcode"
+            style="@style/UserCenterMenu"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/H1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="TV号" />
+
+            <TextView
+                android:id="@+id/text_tvnum"
+                style="@style/H2"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@mipmap/disclosure_arrow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View style="@style/UserCenterMenu_HLine" />
+
+        <Button
+            android:id="@+id/btn_unbind"
+            style="@style/BaseButton"
+            android:layout_marginTop="90dp"
+            android:text="解除绑定" />
+    </LinearLayout>
+</FrameLayout>

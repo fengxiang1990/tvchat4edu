@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171717">
+
+    <com.bizcom.vc.activity.contacts.clipavatar.ClipAvatarLayout
+        android:id="@+id/clip_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#AA000000"
+       >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/cancel"
+            android:text="@string/select_file_title_cancel"
+            android:layout_gravity="start"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:layout_gravity="right"
+            android:id="@+id/ok"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/ok"
+            android:gravity="center"
+            android:text="@string/common_confirm_name"
+            android:textColor="@color/white" />
+    </FrameLayout>
+</RelativeLayout>

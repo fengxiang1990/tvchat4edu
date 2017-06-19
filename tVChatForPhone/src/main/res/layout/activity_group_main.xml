@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/common_activity_title_layout"/>
+    <TextView style="@style/Com_activity_title_Divider_Style"/>
+     <ListView
+        android:id="@+id/ws_group_main_list"
+        style="@style/Com_ListView_Style"
+        android:background="@color/common_activity_backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+</LinearLayout>

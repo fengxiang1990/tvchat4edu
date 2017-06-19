@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+       <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+    </declare-styleable>
+    
+    <!--  gif view -->
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+    
+    
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr name="src" format="reference" />
+        <attr name="assetName" format="string" />
+        <attr name="panEnabled" format="boolean" />
+        <attr name="zoomEnabled" format="boolean" />
+    </declare-styleable>
+    <!-- 用于主题切换 -->
+    <attr name="colorValue" format="color" />
+    <attr name="floatValue" format="float" />
+    <attr name="integerValue" format="integer" />
+    <attr name="booleanValue" format="boolean" />
+    <attr name="dimensionValue" format="dimension" />
+    <attr name="stringValue" format="string" />
+    <attr name="referenceValue" format="color|reference" />
+    <attr name="imageValue" format="reference" />
+    <attr name="curVisibility">
+        <enum name="show" value="0" />
+        <!-- Not displayed, but taken into account during layout (space is left for it). -->
+        <enum name="inshow" value="1" />
+        <!-- Completely hidden, as if the view had not been added. -->
+        <enum name="hide" value="2" />
+    </attr>
+    <declare-styleable name="LinkClickTextView">
+        <attr name="textColorLinkClick" format="color" />
+    </declare-styleable>
+    <!-- 自定义MLImageView的属性 -->
+    <declare-styleable name="MLImageView">
+        <attr name="press_alpha" format="integer" />
+        <attr name="press_color" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="shape_type" format="enum">
+            <enum name="round" value="0" />
+            <enum name="rectangle" value="1" />
+        </attr>
+    </declare-styleable>
+    <!-- 自定义CircleImageView的属性 -->
+    <declare-styleable name="CustomAvatarImageView">
+        <attr name="circle_border_width" format="dimension" />
+        <attr name="circle_border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RoundedImageView">
+    <attr name="riv_corner_radius" format="dimension" />
+    <attr name="riv_corner_radius_top_left" format="dimension" />
+    <attr name="riv_corner_radius_top_right" format="dimension" />
+    <attr name="riv_corner_radius_bottom_left" format="dimension" />
+    <attr name="riv_corner_radius_bottom_right" format="dimension" />
+    <attr name="riv_border_width" format="dimension" />
+    <attr name="riv_border_color" format="color" />
+    <attr name="riv_mutate_background" format="boolean" />
+    <attr name="riv_oval" format="boolean" />
+    <attr name="android:scaleType" />
+    <attr name="riv_tile_mode">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+    <attr name="riv_tile_mode_x">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+    <attr name="riv_tile_mode_y">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+  </declare-styleable>
+</resources>

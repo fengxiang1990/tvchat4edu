@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        applicationId "com.shdx.tvchat.phone"
+        minSdkVersion 17
+        targetSdkVersion 22
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a"  // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+        }
+    }
+
+    buildTypes {
+        release {
+            // buildConfigField("String", "HOST", "\"http://192.168.38.150:8080/iptv/service/\"")
+            // buildConfigField("String", "EDU_HOST", "\"http://192.168.38.150:8080/tvl_edu/\"")
+            buildConfigField("String", "HOST", "\"http://tvl.hongguaninfo.com/iptv/service/\"")
+            buildConfigField("String", "EDU_HOST", "\"http://tvl.hongguaninfo.com/tvl_edu/\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+        debug {
+            //buildConfigField("String", "HOST", "\"http://tvl.hongguaninfo.com/iptv/service/\"")
+            // buildConfigField("String", "HOST", "\"http://192.168.3.108:8080/iptv/service/\"")
+            buildConfigField("String", "HOST", "\"http://tvl.hongguaninfo.com/iptv/service/\"")
+            buildConfigField("String", "EDU_HOST", "\"http://tvl.hongguaninfo.com/tvl_edu/\"")
+            // buildConfigField("String", "HOST", "\"http://192.168.38.150:8080/iptv/service/\"")
+            //buildConfigField("String", "EDU_HOST", "\"http://192.168.38.110:8080/tvl_edu/\"")
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+
+//    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-v4'
+//        all*.exclude group: 'com.android.support', module: 'support-annotations'
+//    }
+}
+
+dependencies {
+    compile project(':oneKeyShareNew')
+    compile project(':library')
+    compile project(':lib-zxing')
+    compile files('libs/CGSUtils.jar')
+    compile files('libs/alibaba.jar')
+    compile files('libs/com.tianan.web.jar')
+    compile files('libs/disklrucache-2.0.2.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/sun.misc.BASE64Decoder.jar')
+    compile files('libs/jpush-android-2.1.3.jar')
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile('com.nineoldandroids:library:2.4.0') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.android.support:recyclerview-v7:22.2.1') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.jakewharton:butterknife:8.4.0') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.facebook.fresco:fresco:0.12.+') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile('com.facebook.fresco:drawee:0.12.+') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
+    compile('com.android.support:cardview-v7:23.0.+') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile project(':V2Api')
+    compile 'com.github.lzyzsd:jsbridge:1.0.4'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+}

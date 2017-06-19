@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/width_3_80"
+    android:paddingRight="@dimen/width_3_80" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/hg_tv_text_guide" />
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/linearLayout1" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="@dimen/width_11_80" -->
+    <!-- android:background="#FFFFFF" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/text1" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_weight="1.0" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="推荐" -->
+    <!-- android:textColor="#000000" -->
+    <!-- android:textSize="@dimen/text_size_3" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/text2" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_weight="1.0" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="播播直播" -->
+    <!-- android:textColor="#000000" -->
+    <!-- android:textSize="@dimen/text_size_3" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/text3" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_weight="1.0" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="美食" -->
+    <!-- android:textColor="#000000" -->
+    <!-- android:textSize="@dimen/text_size_3" /> -->
+    <!-- <TextView -->
+    <!-- android:id="@+id/text4" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_weight="1.0" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="教育" -->
+    <!-- android:textColor="#000000" -->
+    <!-- android:textSize="@dimen/text_size_3" /> -->
+    <!-- <TextView -->
+    <!-- android:id="@+id/text5" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_weight="1.0" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="养生" -->
+    <!-- android:textColor="#000000" -->
+    <!-- android:textSize="@dimen/text_size_3" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/cursor" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="1.5dp" -->
+    <!-- android:background="@color/main_color" -->
+    <!-- /> -->
+
+
+    <!-- <android.support.v4.view.ViewPager -->
+    <!-- android:id="@+id/vPager" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_gravity="center" -->
+    <!-- android:layout_weight="1.0" -->
+    <!-- android:background="#000000" -->
+    <!-- android:flipInterval="30" -->
+    <!-- android:persistentDrawingCache="animation" /> -->
+
+</LinearLayout>

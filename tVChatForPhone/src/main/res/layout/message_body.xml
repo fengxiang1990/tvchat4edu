@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/message_body_time_text"
+        style="@style/Com_Normal_TextView_Style"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="@dimen/common_item_text_size_small"
+        android:layout_marginBottom="@dimen/common_margin_verticial_small"
+        android:textColor="#5E5f61" />
+    <LinearLayout
+        android:paddingTop="@dimen/common_margin_horizontal_small"
+        android:id="@+id/message_body_left_user_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_body_time_text"
+        android:paddingRight="@dimen/common_padding_verticial" >
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="1" >
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <com.bizcom.vc.widget.CustomAvatarImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/conversation_message_body_icon_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar"
+                    app:riv_oval="true" />
+                    <LinearLayout
+                        android:id="@+id/messag_body_content_ly_left"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin_horizontal_small"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/message_body_left_bg_selector"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/messageBodyView_common_margin_left_or_right"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="@dimen/messageBodyView_content_padding_vertical"
+                        android:paddingBottom="@dimen/messageBodyView_content_padding_vertical" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                    </LinearLayout>
+                <TextView
+                    android:id="@+id/message_body_video_item_second_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="@dimen/messageBodyView_common_margin_left_or_right"
+                    android:text="24&apos;&apos;" />
+                <ImageView
+                    android:id="@+id/message_body_unread_icon_left"
+                    android:layout_width="@dimen/messageBodyView_unread_state"
+                    android:layout_height="@dimen/messageBodyView_unread_state"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/voice_message_unread_icon"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/message_body_failed_item_left"
+                    android:layout_width="@dimen/messageBodyView_failed_state"
+                    android:layout_height="@dimen/messageBodyView_failed_state"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/message_sent_failed_icon"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/message_body_sending_icon_left"
+                    android:layout_width="@dimen/messageBodyView_sending_state"
+                    android:layout_height="@dimen/messageBodyView_sending_state"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/spin_black_70" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="@dimen/common_margin_horizontal_small"
+        android:id="@+id/message_body_remote_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/message_body_time_text"
+        android:paddingLeft="@dimen/common_padding_verticial"
+        android:visibility="visible" >
+        <ImageView
+            android:id="@+id/message_body_sending_icon_right"
+            android:layout_width="@dimen/messageBodyView_sending_state"
+            android:layout_height="@dimen/messageBodyView_sending_state"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/spin_black_70" />
+        <ImageView
+            android:id="@+id/message_body_failed_item_right"
+            android:layout_width="@dimen/messageBodyView_failed_state"
+            android:layout_height="@dimen/messageBodyView_failed_state"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/message_sent_failed_icon"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/message_body_unread_icon_right"
+            android:layout_width="@dimen/messageBodyView_unread_state"
+            android:layout_height="@dimen/messageBodyView_unread_state"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/voice_message_unread_icon"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/message_body_video_item_second_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/messageBodyView_common_margin_left_or_right"
+            android:paddingStart="@dimen/messageBodyView_common_margin_left_or_right"
+            android:text="24&apos;&apos;" />
+        <TableLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:shrinkColumns="0" >
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:id="@+id/messag_body_content_ly_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/messageBodyView_common_margin_left_or_right"
+                    android:layout_marginStart="@dimen/messageBodyView_common_margin_left_or_right"
+                    android:background="@drawable/message_body_right_bg_selector"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/common_margin_horizontal_small"
+                    android:paddingTop="@dimen/messageBodyView_content_padding_vertical"
+                    android:paddingBottom="@dimen/messageBodyView_content_padding_vertical">
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+        <com.bizcom.vc.widget.CustomAvatarImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/conversation_message_body_icon_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_oval="true" />
+    </LinearLayout>
+</RelativeLayout>

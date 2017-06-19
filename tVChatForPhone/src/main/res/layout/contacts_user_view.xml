@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <RelativeLayout
+        android:id="@+id/contact_user_view_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/conversation_view_margin"
+        android:layout_marginTop="@dimen/conversation_view_margin" >
+        <RelativeLayout
+            android:id="@+id/contact_user_img_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/conversation_view_margin"
+            android:layout_marginLeft="@dimen/contacts_user_view_contact_user_name_margin_left"
+            android:layout_marginStart="@dimen/conversation_view_margin"
+            android:layout_marginTop="@dimen/conversation_view_margin" >
+            <RelativeLayout
+                android:id="@+id/contact_user_img_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+                <include layout="@layout/common_avatar" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/contact_user_status_iv"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignBottom="@+id/contact_user_img_ly"
+                android:layout_alignEnd="@+id/contact_user_img_ly"
+                android:layout_alignRight="@+id/contact_user_img_ly"
+                android:src="@drawable/online" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/contact_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/contacts_user_view_contact_user_name_margin_left"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/contact_user_img_container"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/contacts_user_view_text_max_width"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/contacts_user_view_item_color_offline"
+            android:textSize="@dimen/common_item_text_size" />
+        <ImageView
+            android:id="@+id/contact_show_user_menu"
+            style="@style/Com_Arrow_Style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right_gray"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/contact_user_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/contacts_user_view_contact_user_sign_margin_left"
+            android:layout_toRightOf="@+id/contact_user_img_container"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/common_item_text_color_gray"
+            android:textSize="@dimen/common_item_text_size" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/contact_group_view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/contact_user_view_root"
+        android:background="#f2f2f2"
+        android:orientation="horizontal" >
+    </LinearLayout>
+</RelativeLayout>
